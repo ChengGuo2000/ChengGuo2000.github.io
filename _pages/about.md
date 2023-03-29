@@ -16,4 +16,4 @@ Previously, I worked with <a href = "https://yunhefeng.me/">Dr. Yunhe Feng</a> i
 
 My research interests lies in Affective Computing and Natural Language Processing.
 
-Outside of my academic interests, I enjoy theatre and taking acting classes.
+Outside of my academic interests, I enjoy theatre acting and creative writing.
