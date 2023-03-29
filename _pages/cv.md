@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<a href = "http://chengguo2000.github.io/files/ChengGuo_CV.pdf">Download pdf here</a>
+<a href = "http://chengguo2000.github.io/files/ChengGuo_CV.pdf">Download the PDF version (with more details) here</a>
 
 Education
 ======
