@@ -8,10 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Cheng Guo is a fourth-year undergraduate student at University of Washington, Seattle, majoring in Human-Centered Design & Engineering.
+Cheng Guo is an undergraduate student at University of Washington, Seattle, majoring in Human-Centered Design & Engineering.
 
-Currently, I am lucky to work with [Sourojit Ghosh] (https://sourojitghosh.github.io/) on [Human-Centered Natural Language Processing] (https://depts.washington.edu/hdsl/). 
+Currently, I am lucky to work with <a href = "https://sourojitghosh.github.io/">Sourojit Ghosh</a> on <a href = "https://depts.washington.edu/hdsl/">Human-Centered Natural Language Processing</a>. 
 
-Previously, I worked with [Dr. Yunhe Feng] (https://yunhefeng.me/) on [EmojiCloud] (https://pypi.org/project/EmojiCloud/).
+Previously, I worked with <a href = "https://yunhefeng.me/">Dr. Yunhe Feng</a> on <a href = "https://pypi.org/project/EmojiCloud/">EmojiCloud</a>.
 
 My research interests lies in Affective Computing and Natural Language Processing.
+
+Outside of my academic interests, I enjoy theatre and taking acting classes.

@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Cheng Guo"
-  avatar           : "ChengGuoProfile.png"
+  avatar           : "ChengGuoProfile.jpg"
   bio              : "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering"
   location         : "Seattle WA"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=yUoCYwEAAAAJ&hl=en"
-  email            : "cguo3@uw.edu"
+  email            : "479137229@qq.com"
   researchgate     : # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : # "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/gc1206/"
+  linkedin         : "gc1206"
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
