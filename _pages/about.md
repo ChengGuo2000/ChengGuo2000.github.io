@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Cheng Guo is an undergraduate student at University of Washington, Seattle, majoring in Human-Centered Design & Engineering.
+Hello! I am an undergraduate student at University of Washington, Seattle, majoring in Human-Centered Design & Engineering.
 
 Currently, I am lucky to work with <a href = "https://sourojitghosh.github.io/">Sourojit Ghosh</a> on <a href = "https://depts.washington.edu/hdsl/">Human-Centered Natural Language Processing</a>. 
 
