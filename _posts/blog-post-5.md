@@ -1,9 +1,9 @@
 ---
 title: 'Chinese students – safe under Trump?'
 date: 2017-02-28
-permalink: /posts/blog-post-1/
+permalink: /posts/blog-post-5/
 tags:
   - cool posts
 ---
 
-<a href = "http://chengguo2000.github.io/files/Blog-Posts/1_-_Chinese_students_–_safe_under_Trump.pdf">Download post 1 here</a>
+<a href = "http://chengguo2000.github.io/files/Blog-Posts/1_-_Chinese_students_–_safe_under_Trump.pdf">Download post 5 here</a>
