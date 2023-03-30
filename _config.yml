@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Cheng Guo"
 title_separator          : "-"
 name                     : &name "Cheng Guo"
-description              : &description "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering"
+description              : &description "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering (Data Science option)"
 url                      : https://chengguo2000.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "chengguo2000.github.io"
@@ -80,10 +80,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Cheng Guo (郭成)"
+  name             : "Cheng Guo"
   avatar           : "ChengGuoProfile.jpg"
-  bio              : "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering"
-  location         : "Seattle WA"
+  bio              : "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering (Data Science option)"
+  location         : "Seattle, WA"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=yUoCYwEAAAAJ&hl=en"
