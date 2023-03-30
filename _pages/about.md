@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "About"
-excerpt: "About"
+title: "About me"
+excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -18,4 +18,4 @@ My research interests lies in Affective Computing and Natural Language Processin
 
 Outside of my academic interests, I enjoy theatre acting and creative writing.
 
-Please reach me at my email: cguo3 at uw dot edu.
+Please reach me at my email - cguo3 at uw dot edu.

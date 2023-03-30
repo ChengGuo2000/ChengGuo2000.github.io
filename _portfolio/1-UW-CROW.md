@@ -1,10 +1,10 @@
 ---
 title: "Catching the Right, Objective Word"
-excerpt: "UW HCDE 310 Final Project <br/><img src='/files/Portfolio/CROW.jpg>"
+excerpt: "UW HCDE 310 Final Project <br/><img src='/files/Portfolio/CROW.jpg'>"
 collection: portfolio
 ---
 
-<img src='/files/Portfolio/CROW.jpg>
+<img src='/files/Portfolio/CROW.jpg'>
 
 <a href = "http://chengguo2000.pythonanywhere.com/">Visit the website here</a>
 
