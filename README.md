@@ -1,6 +1,6 @@
-**Cheng Guo's personel webpage, forked from academicpages.**
+**Cheng Guo's personal webpage, forked from academicpages.**
 
-**Thanks for the contributors of this amazing project!**
+**Thanks for the contributors of this project!**
 
 ----------------
 
