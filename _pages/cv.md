@@ -13,7 +13,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Human-Centered Design & Engineering, University of Washington, Seattle, 2019-2023
+* B.S. in Human-Centered Design & Engineering (Data Science Option), University of Washington, Seattle, 2019-2023
   * Minor in Drama: Acting
   * GPA: 3.82 (Dean's List - All Quarters)
 
