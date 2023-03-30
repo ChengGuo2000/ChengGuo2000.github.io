@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am an undergraduate student at the University of Washington, Seattle, majoring in Human-Centered Design & Engineering.
+Hello! I am an undergraduate student at the University of Washington, Seattle, majoring in Human-Centered Design & Engineering (Data Science option).
 
 Currently, I am lucky to work with <a href = "https://sourojitghosh.github.io/">Sourojit Ghosh</a> in the <a href = "https://depts.washington.edu/hdsl/">Human-Centered Natural Language Processing Directed Research Group</a> at UW Seattle. 
 
