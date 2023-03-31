@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<a href = "http://chengguo2000.github.io/files/ChengGuo_CV.pdf">Download the PDF version (with more details) here</a>
+<a href = "http://chengguo2000.github.io/files/ChengGuo_CV.pdf">Please download Cheng Guo’s CV (with more details) here.</a>
 
 Education
 ======
