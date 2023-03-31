@@ -18,4 +18,4 @@ My research interests lies in <a href = "https://en.wikipedia.org/wiki/Affective
 
 Outside of my academic interests, I enjoy <a href = "https://en.wikipedia.org/wiki/Acting">Acting</a> and <a href = "https://en.wikipedia.org/wiki/Creative_writing">Creative Writing</a>.
 
-Please email me at <a href = "cguo3@uw.edu">cguo3 at uw dot edu</a>.
+Please email me at <a href = "https://chengguo2000.github.io/">cguo3 at uw dot edu</a>.
