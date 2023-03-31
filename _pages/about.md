@@ -14,8 +14,8 @@ Currently, I am lucky to work with <a href = "https://sourojitghosh.github.io/">
 
 Previously, I worked with <a href = "https://yunhefeng.me/">Dr. Yunhe Feng</a> in the <a href = "https://infoseeking.org/">InfoSeeking Lab</a> at UW Seattle.
 
-My research interests lies in Affective Computing and Natural Language Processing.
+My research interests lies in <a href = "https://en.wikipedia.org/wiki/Affective_computing">Affective Computing</a> and <a href = "https://en.wikipedia.org/wiki/Natural_language_processing">Natural Language Processing</a>.
 
-Outside of my academic interests, I enjoy theatre acting and creative writing.
+Outside of my academic interests, I enjoy <a href = "https://en.wikipedia.org/wiki/Acting">Acting</a> and <a href = "https://en.wikipedia.org/wiki/Creative_writing">Creative Writing</a>.
 
-Please reach me at my email - cguo3 at uw dot edu.
+Please email me at <a href = "cguo3@uw.edu">cguo3 at uw dot edu</a>.
