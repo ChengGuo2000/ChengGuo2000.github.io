@@ -38,9 +38,3 @@ Skills
 * Programming: Python, Java, C/C++, R, SQL, LaTeX, MATLAB
 * Tools: Amazon MTurk, SLURM, Adobe Photoshop, Adobe Illustrator, Figma, AutoCAD, Autodesk Fusion 360
 * Language: English, Chinese, German
-  
-Additional Experience
-======
-* Volunteer at the 2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)
-  * Seattle, WA
-  * July 2022
