@@ -9,5 +9,3 @@ citation: 'Y. Feng, C. Guo, B. Wen, P. Sun, Y. Yue, and D. Tao. EmojiCloud: a To
 <a href = "http://chengguo2000.github.io/files/Papers/EmojiCloud.pdf">Download the paper here</a>
 |
 <a href = "https://pypi.org/project/EmojiCloud/">Download the code here</a>
-|
-<a href = "http://chengguo2000.github.io/files/Papers/EmojiCloud-Write-Up.pdf">Download my write up here</a>
