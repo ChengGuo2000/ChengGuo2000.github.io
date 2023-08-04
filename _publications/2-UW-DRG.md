@@ -8,5 +8,5 @@ citation: 'Ghosh, S., Ali, M., Batra, A., Guo, C., Jain, M., Kang, J., Kharchenk
 ---
 
 <a href = "http://chengguo2000.github.io/files/Publications/Emotions_Classifier_HCII_final.pdf">Download the paper here</a>
-
+|
 <a href = "https://link.springer.com/chapter/10.1007/978-3-031-35891-3_5">View in conference proceedings</a>
