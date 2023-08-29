@@ -5,7 +5,7 @@ collection: portfolio
 ---
 
 | Category              | Description             |
-| :-------------------- | :---------------------- |
+| :-------------------: | :---------------------: |
 | Genre                 | Romantic, Comedy        |
 | Length                | 60~90 minutes           |
 | Case Size             | 2                       |
