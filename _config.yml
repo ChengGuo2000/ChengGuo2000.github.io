@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Cheng Guo"
 title_separator          : "-"
 name                     : &name "Cheng Guo"
-description              : &description "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering (Data Science option)"
+description              : &description "Computer Science Graduate Student at UCSD"
 url                      : https://chengguo2000.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "chengguo2000.github.io"
@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Cheng Guo"
   avatar           : "ChengGuoProfile.jpg"
-  bio              : "UW Seattle Undergraduate student majoring in Human-Centered Design & Engineering (Data Science option)"
-  location         : "Seattle, WA"
+  bio              : "Computer Science Graduate Student at UCSD"
+  location         : "La Jolla, CA"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=yUoCYwEAAAAJ&hl=en"
+  googlescholar    : "https://scholar.google.com/citations?user=tE7TkaIAAAAJ&hl=en"
   email            : "479137229@qq.com"
   researchgate     : 
   uri              :
