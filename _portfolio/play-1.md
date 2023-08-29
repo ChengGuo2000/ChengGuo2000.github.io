@@ -1,13 +1,13 @@
 ---
 title: "The Pathetic Pygmalion"
-excerpt: "Genre: romantic, dark comedy. Length: 60~90 minutes. Cast Size: 2. Age Appropriateness: ages 18 and up"
+excerpt: "Genre: Romantic, Comedy | Length: 60~90 minutes | Cast Size: 2 | Age Appropriateness: Ages 18 and up"
 collection: portfolio
 ---
 
-| ---:                  |                    ---: |
-| Genre                 | romantic comedy         |
+| :-------------------- | ----------------------: |
+| Genre                 | Romantic, Comedy        |
 | Length                | 60~90 minutes           |
 | Case Size             | 2                       |
-| Age Appropriateness   | ages 18 and up          |
+| Age Appropriateness   | Ages 18 and up          |
 
-Upcoming playwriting, full play coming soon!
+Full Play Coming Soon!
