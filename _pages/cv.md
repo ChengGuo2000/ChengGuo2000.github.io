@@ -13,7 +13,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in Human-Centered Design & Engineering (Data Science Option), University of Washington, Seattle, 2019-2023
+* M.S. in Computer Science & Engineering, University of California, San Diego, Expected June 2025
+
+* B.S. in Human-Centered Design & Engineering (Data Science Option), University of Washington, Seattle, June 2023
   * Minor in Drama: Acting
   * GPA: 3.82 (Dean's List - All Quarters)
 
@@ -37,4 +39,4 @@ Skills
 ======
 * Programming: Python, Java, C/C++, R, SQL, LaTeX, MATLAB
 * Tools: Amazon MTurk, SLURM, Adobe Photoshop, Adobe Illustrator, Figma, AutoCAD, Autodesk Fusion 360
-* Language: English, Chinese, German
+* Language: English (Fluent), Chinese (Native), German (Beginner)
