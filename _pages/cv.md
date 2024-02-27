@@ -38,5 +38,5 @@ Research Experience
 Skills
 ======
 * Programming: Python, Java, C/C++, R, SQL, LaTeX, MATLAB
-* Tools: Amazon MTurk, SLURM, Adobe Photoshop, Adobe Illustrator, Figma, AutoCAD, Autodesk Fusion 360
-* Language: English (Fluent), Chinese (Native), German (Beginner)
+* Software: PyTorch, TensorFlow, Microsoft Azure AI Platform, Amazon Mechanical Turk, SLURM Workload Manager
+* Language: English (Fluent), Chinese (Native), German (Elementary)
