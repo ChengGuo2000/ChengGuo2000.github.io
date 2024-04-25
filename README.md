@@ -2,8 +2,6 @@
 
 **Thanks for the contributors to this project!**
 
-Love is a complex emotion and can have different meanings depending on the context. It is often described as a strong feeling of affection, attachment, or devotion towards someone or something. Love can take many forms, such as romantic love, familial love, or platonic love. It can also involve a range of emotions, including happiness, joy, and contentment, as well as pain, sadness, and heartbreak. Ultimately, the meaning of love is subjective and can vary from person to person.
-
 A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
 
 I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template/theme.
