@@ -1,5 +1,5 @@
 ---
-title: 'My Idea on Developing a New Benchmark for Causal Inference in LLMs: An Informal Write-Up 1'
+title: 'My Idea on Developing a New Benchmark for Causal Inference in LLMs'
 date: 2024-03-26
 permalink: /posts/causal-llm-write-up-1/
 ---

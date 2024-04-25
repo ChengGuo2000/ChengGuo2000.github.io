@@ -1,5 +1,5 @@
 ---
-title: 'Developing Benchmark for Causal Representation Learning in LLMs: An Informal Write-Up 2'
+title: 'Developing Benchmark for Causal Representation Learning in LLMs'
 date: 2024-04-12
 permalink: /posts/causal-llm-write-up-2/
 ---
