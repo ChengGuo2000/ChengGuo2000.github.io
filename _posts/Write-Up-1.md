@@ -1,7 +1,7 @@
 ---
 title: 'My Idea on Developing a New Benchmark for Causal Inference in LLMs'
 date: 2024-03-26
-permalink: /posts/causal-llm-write-up-1/
+permalink: /posts/causal-llm-write-up-1
 ---
 
 <a href = "http://chengguo2000.github.io/files/Blog-Posts/Causal_LLM_Write_Up_1.pdf">Download the write-up 1 here</a>
