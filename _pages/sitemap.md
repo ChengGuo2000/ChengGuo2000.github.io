@@ -18,3 +18,8 @@ A list of all the posts and pages found on the site. For you robots out there is
 {% for post in site.posts %}
   {% include archive-single.html %}
 {% endfor %}
+
+<h2>Portfolio</h2>
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %}
