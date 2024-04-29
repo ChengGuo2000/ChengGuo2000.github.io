@@ -12,4 +12,4 @@ Hello! I am a computer science graduate student at UCSD. My research interests l
 
 I obtained my undergraduate degree at the University of Washington, Seattle, majoring in Human-Centered Design & Engineering (Data Science option), where I am lucky to work with <a href = "https://sourojitghosh.github.io/">Sourojit Ghosh</a> and <a href = "https://yunhefeng.me/">Dr. Yunhe Feng</a> at UW Seattle. 
 
-Outside of my academic interests, I enjoy theatre acting and playwriting.
+Outside of my academic interests, I enjoy drama and theatre arts.
