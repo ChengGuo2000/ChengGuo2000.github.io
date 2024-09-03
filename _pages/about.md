@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a computer science graduate student at UCSD. My research interests lie in Causal Representation Learning and Natural Language Processing. I am currently researching on causal representation learning in large language models at the Halıcıoğlu Data Science Institute of UCSD.
+Hello! I am a computer science graduate student at UCSD. My research interests lie in NLP and HCI, where I research about developing ways to train LLMs with human-in-the-loop. I self-initialized a project on developing a causal inference text benchmark with help from <a href = "https://www.amirfeder.com/">Dr. Amir Feder</a> at Columbia University and <a href = "https://biweihuang.com/">Prof. Biwei Huang</a> at UCSD.
 
 I obtained my undergraduate degree at the University of Washington, Seattle, majoring in Human-Centered Design & Engineering (Data Science option), where I am lucky to work with <a href = "https://sourojitghosh.github.io/">Sourojit Ghosh</a> and <a href = "https://yunhefeng.me/">Dr. Yunhe Feng</a> at UW Seattle. 
 
