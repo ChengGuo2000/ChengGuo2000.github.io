@@ -18,7 +18,7 @@ A Github Pages template for academic websites. This was forked (then detached) b
 
 See more info at https://academicpages.github.io/
 
-## Running Locally
+## Running locally
 
 When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
 
