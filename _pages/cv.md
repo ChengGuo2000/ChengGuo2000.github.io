@@ -44,3 +44,18 @@ Skills
 * Programming: Python, Java, C/C++, R, SQL, LaTeX, MATLAB
 * Software: PyTorch, TensorFlow, Microsoft Azure AI Platform, Amazon Mechanical Turk, SLURM Workload Manager
 * Language: English (Fluent), Chinese (Native), German (Elementary)
+
+Additional Experience
+======
+* Burke Museum Accessibility Design Project 
+  * UW HCDE 318 Class Project
+  * September 2021 - December 2021
+* LinkedIn User Interface Redesign Project 
+  * UW HCDE 301 Class Project
+  * April 2022 – June 2022 
+* UW Student Organization Booths User Research Project 
+  * UW HCDE 313 Class Project
+  * April 2022 – June 2022 
+* UW Sports Video UX Design Project 
+  * UW HCDE Undergraduate Capstone Project
+  * January 2023 - June 2023
