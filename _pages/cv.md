@@ -41,7 +41,7 @@ Research Experience
   
 Skills
 ======
-* Programming: Python, Java, C/C++, R, Javascript, HTML, CSS, SQL, LaTeX, MATLAB
+* Programming: Python, Java, C/C++, R, Javascript, HTML/CSS, SQL, LaTeX, MATLAB
 * Software: PyTorch, TensorFlow, Microsoft Azure AI Platform, Amazon Mechanical Turk, SLURM Workload Manager
 * Language: English (Fluent), Chinese (Native), German (Elementary)
 
