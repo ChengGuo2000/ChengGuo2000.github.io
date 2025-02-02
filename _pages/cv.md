@@ -14,7 +14,7 @@ redirect_from:
 Education
 ======
 * M.S. in Computer Science & Engineering, University of California, San Diego, Expected June 2025
-  * GPA: 3.84
+  * GPA: 3.87
 
 * B.S. in Human-Centered Design & Engineering (Data Science Option), University of Washington, Seattle, June 2023
   * GPA: 3.82 (Dean's List - All Quarters)
