@@ -7,7 +7,6 @@
 4. Hands-On Large Language Models [Link](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) 
 
 **University Courses**
-
 1. Stanford CS224n - NLP with DL
 [Course Link](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/) 
 [YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4) 
