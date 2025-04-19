@@ -13,10 +13,10 @@
 2. Stanford CS231n - DL for CV
 [Course Link](https://cs231n.stanford.edu/2017/index.html) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLSVEhWrZWDHQTBmWZufjxpw3s8sveJtnJ)
-4. Stanford CS224w - ML with Graph (GNN)
+3. Stanford CS224w - ML with Graph (GNN)
 [Course Link](https://snap.stanford.edu/class/cs224w-2020/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn)
-6. MIT 18.06 - Linear Algebra
+4. MIT 18.06 - Linear Algebra
 [Course Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)
 
@@ -35,5 +35,5 @@
 **Other References**
 1. Deep Learning Book: [Link](https://www.deeplearningbook.org/) 
 2. Dive into Deep Learning (D2L): [Link](https://d2l.ai/)
-3. Chaofa’s Blog: [Link](https://bruceyuan.com/) 
-4. Reproducing o1: [Link](https://medium.com/@peakji/a-small-step-towards-reproducing-openai-o1-b9a756a00855) 
+3. Vizuara AI Lab: [Link](https://www.youtube.com/@vizuara)
+4. Chaofa’s Blog: [Link](https://bruceyuan.com/) 
