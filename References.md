@@ -24,7 +24,13 @@
 1. From Nand to Tetris (Part I): [Link](https://www.coursera.org/learn/build-a-computer) 
 2. From Nand to Tetris (Part II): [Link](https://www.coursera.org/learn/nand2tetris2) 
 3. Microsoft Python Development Professional Certificate: [Link](https://www.coursera.org/professional-certificates/microsoft-python-developer) 
-4. DeepLearning.ai: [Link](https://www.coursera.org/partners/deeplearning-ai) 
+4. DeepLearning.ai: [Link](https://www.coursera.org/partners/deeplearning-ai)
+
+**Cognitive Science**
+1. Computational Neuroscience: [Link](https://www.coursera.org/learn/computational-neuroscience)
+2. Human Behavioral Biology: [Link](https://www.youtube.com/playlist?list=PL848F2368C90DDC3D)
+3. MIT 9.13 - The Human Brain: [Link](https://ocw.mit.edu/courses/9-13-the-human-brain-spring-2019/)
+4. MIT 9.003 - Brains, Minds and Machines: [Link](https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/)
 
 **Other Courses**
 1. Elements of AI: [Link](https://www.elementsofai.com/) 
