@@ -33,10 +33,11 @@
 4. MIT 9.003 - Brains, Minds and Machines: [Link](https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/)
 
 **Other Courses**
-1. Elements of AI: [Link](https://www.elementsofai.com/) 
-2. Practical Deep Learning: [Link](https://course.fast.ai/) 
-3. Neural Network: From Zero to Hero: [Link](https://karpathy.ai/zero-to-hero.html) 
-4. Chaofa’s LLMs-Zero-to-Hero: [Link](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) 
+1. Elements of AI: [Link](https://www.elementsofai.com/)
+2. MIT 6.S191: [Link](https://introtodeeplearning.com/) 
+3. Practical Deep Learning: [Link](https://course.fast.ai/) 
+4. Neural Network: From Zero to Hero: [Link](https://karpathy.ai/zero-to-hero.html) 
+5. Chaofa’s LLMs-Zero-to-Hero: [Link](https://github.com/bbruceyuan/LLMs-Zero-to-Hero) 
 
 **Other References**
 1. Deep Learning Book: [Link](https://www.deeplearningbook.org/) 
