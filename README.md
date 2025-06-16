@@ -1,4 +1,4 @@
-### Cheng Guo's personal webpage, forked from academicpages.
+### [Cheng Guo's personal webpage](https://chengguo2000.github.io/), forked from academicpages.
 
 ### Thanks for the contributors to this amazing project!
 
