@@ -13,7 +13,9 @@ redirect_from:
 
 Education
 ======
-* M.S. in Computer Science & Engineering, University of California, San Diego, Expected June 2025
+* Ph.D. in Computer Science, Case Western Reserve University, Expected June 2030
+
+* M.S. in Computer Science, University of California, San Diego, June 2025
   * GPA: 3.87
 
 * B.S. in Human-Centered Design & Engineering (Data Science Option), University of Washington, Seattle, June 2023
@@ -44,18 +46,3 @@ Skills
 * Programming: Python, Java, C/C++, R, Javascript, HTML/CSS, SQL, LaTeX, MATLAB
 * Software: PyTorch, TensorFlow, Microsoft Azure AI Platform, Amazon Mechanical Turk, SLURM Workload Manager
 * Language: English (Fluent), Chinese (Native), German (Elementary)
-
-Additional Experience
-======
-* Burke Museum Accessibility Design Project 
-  * UW HCDE 318 Class Project
-  * September 2021 - December 2021
-* LinkedIn User Interface Redesign Project 
-  * UW HCDE 301 Class Project
-  * April 2022 – June 2022 
-* UW Student Organization Booths User Research Project 
-  * UW HCDE 313 Class Project
-  * April 2022 – June 2022 
-* UW Sports Video UX Design Project 
-  * UW HCDE Undergraduate Capstone Project
-  * January 2023 - June 2023
