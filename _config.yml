@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Cheng Guo"
 title_separator          : "-"
 name                     : &name "Cheng Guo"
-description              : &description "Computer Science Graduate Student at UCSD"
+description              : &description "Computer Science PhD Student at CWRU"
 url                      : https://chengguo2000.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/post"
 repository               : "chengguo2000.github.io"
@@ -86,8 +86,8 @@ analytics:
 author:
   name             : "Cheng Guo"
   avatar           : "ChengGuoProfile.jpg"
-  bio              : "Computer Science Graduate Student at UCSD"
-  location         : "La Jolla, CA"
+  bio              : "Computer Science PhD Student at CWRU"
+  location         : "Cleveland, OH"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=tE7TkaIAAAAJ&hl=en"
