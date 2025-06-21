@@ -10,13 +10,19 @@
 1. Stanford CS224n - NLP with DL
 [Course Link](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4) 
-2. Stanford CS231n - DL for CV
-[Course Link](https://cs231n.stanford.edu/2017/index.html) |
-[YouTube Link](https://www.youtube.com/playlist?list=PLSVEhWrZWDHQTBmWZufjxpw3s8sveJtnJ)
-3. Stanford CS224w - ML with Graph (GNN)
+2. Stanford CS224w - ML with Graph (GNN)
 [Course Link](https://snap.stanford.edu/class/cs224w-2020/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn)
-4. MIT 18.06 - Linear Algebra
+3. Stanford CS224u - NLU
+[Course Link](https://web.stanford.edu/class/cs224u/2021/) |
+[YouTube Link](https://www.youtube.com/watch?v=2w_qYPxuzeA)
+4. Stanford CS231n - DL for CV
+[Course Link](https://cs231n.stanford.edu/2017/index.html) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLSVEhWrZWDHQTBmWZufjxpw3s8sveJtnJ)
+5. Stanford CS330 - Deep Multi-Task and Meta Learning
+[Course Link](https://cs330.stanford.edu/fall2022/index.html) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rNjRoawgt72BBNwL2V7doGI)
+6. MIT 18.06 - Linear Algebra
 [Course Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)
 
