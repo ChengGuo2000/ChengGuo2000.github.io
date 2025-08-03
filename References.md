@@ -22,7 +22,10 @@
 5. Stanford CS330 - Deep Multi-Task and Meta Learning
 [Course Link](https://cs330.stanford.edu/fall2022/index.html) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rNjRoawgt72BBNwL2V7doGI)
-6. MIT 18.06 - Linear Algebra
+6. Stanford CS336 - Language Modeling from Scratch
+[Course Link](https://stanford-cs336.github.io/spring2025/) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
+8. MIT 18.06 - Linear Algebra
 [Course Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)
 
