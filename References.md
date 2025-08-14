@@ -53,11 +53,3 @@
 2. Dive into Deep Learning (D2L): [Link](https://d2l.ai/)
 3. Vizuara AI Lab: [Link](https://www.youtube.com/@vizuara)
 4. Chaofa’s Blog: [Link](https://bruceyuan.com/)
-
-**Project Code Framework**
-1. Handwriting Recognition: [Link](https://colab.research.google.com/drive/1xT2bEE_QG0rBDR2sgCZ-WPumXccd6WFo?usp=sharing)
-2. Textual Sentiment Analysis: [link](https://colab.research.google.com/drive/1YMPdl9EbDfSroOv4xFdXYFZ-6f5PxGhz?usp=sharing)
-3. Reinforcement Learning for Games: [link](https://colab.research.google.com/drive/1UYu8VTjhPdj79bKlUZtmU92Nkzp2zhSl?usp=sharing)
-4. Stable Diffusion Art Creation: [Link](https://colab.research.google.com/drive/1bQbM36BVmc7CPixwkF7uLb-9E0GT7YwE?usp=sharing)
-5. AI Chatbot: [Link](https://colab.research.google.com/drive/1o66_cj2FJcJBj3lEROO3JcCMjz4rBBU2?usp=sharing)
-
