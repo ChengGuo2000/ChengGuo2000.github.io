@@ -29,12 +29,6 @@
 [Course Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)
 
-**Coursera**
-1. From Nand to Tetris (Part I): [Link](https://www.coursera.org/learn/build-a-computer) 
-2. From Nand to Tetris (Part II): [Link](https://www.coursera.org/learn/nand2tetris2) 
-3. Microsoft Python Development Professional Certificate: [Link](https://www.coursera.org/professional-certificates/microsoft-python-developer) 
-4. DeepLearning.ai: [Link](https://www.coursera.org/partners/deeplearning-ai)
-
 **Cognitive Science**
 1. Computational Neuroscience: [Link](https://www.coursera.org/learn/computational-neuroscience)
 2. Human Behavioral Biology: [Link](https://www.youtube.com/playlist?list=PL848F2368C90DDC3D)
@@ -53,3 +47,4 @@
 2. Dive into Deep Learning (D2L): [Link](https://d2l.ai/)
 3. Vizuara AI Lab: [Link](https://www.youtube.com/@vizuara)
 4. Chaofa’s Blog: [Link](https://bruceyuan.com/)
+5. DeepLearning.ai: [Link](https://www.coursera.org/partners/deeplearning-ai)
