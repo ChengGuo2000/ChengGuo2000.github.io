@@ -29,7 +29,9 @@
 [Course Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)
 8. MIT 6.S191 - Intro to DL:
-[Course Link](https://introtodeeplearning.com/) 
+[Course Link](https://introtodeeplearning.com/)
+9. MIT 6.5940 - TinyML and Efficient Deep Learning Computing:
+[Course Link](https://hanlab.mit.edu/courses/2024-fall-65940)
 
 **Cognitive Science Courses**
 1. Computational Neuroscience: [Link](https://www.coursera.org/learn/computational-neuroscience)
