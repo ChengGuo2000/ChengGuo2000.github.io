@@ -38,6 +38,9 @@
 2. Human Behavioral Biology: [Link](https://www.youtube.com/playlist?list=PL848F2368C90DDC3D)
 3. MIT 9.13 - The Human Brain: [Link](https://ocw.mit.edu/courses/9-13-the-human-brain-spring-2019/)
 4. MIT 9.003 - Brains, Minds and Machines: [Link](https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/)
+5. MIT 6.868J - The Society of Mind: [Link](https://ocw.mit.edu/courses/6-868j-the-society-of-mind-fall-2011/)
+    - MIT AI Course Lecture 19 - Architectures: GPS, SOAR, Subsumption, Society of Mind: [Link](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-19-architectures-gps-soar-subsumption-society-of-mind/)
+    - MIT AGI Course Talk - Cognitive Architecture (Nate Derbinsky): [Link](https://www.youtube.com/watch?v=bfO4EkoGh40)
 
 **Other Resources**
 1. Elements of AI: [Link](https://www.elementsofai.com/) (finished)
