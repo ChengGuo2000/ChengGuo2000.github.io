@@ -1,37 +1,39 @@
 ### Cheng Guo's List of References
 
 **Books**
-1. Machine Learning with PyTorch and Scikit-Learn: [Link](https://github.com/rasbt/machine-learning-book) 
-2. Machine Learning Q and AI: [Link](https://github.com/rasbt/MachineLearning-QandAI-book)
-3. Build a Large Language Model (From Scratch): [Link](https://github.com/rasbt/LLMs-from-scratch) (finished)
+1. Build a Large Language Model (From Scratch): [Link](https://github.com/rasbt/LLMs-from-scratch) (finished)
+2. Machine Learning with PyTorch and Scikit-Learn: [Link](https://github.com/rasbt/machine-learning-book) 
+3. Machine Learning Q and AI: [Link](https://github.com/rasbt/MachineLearning-QandAI-book)
 4. Hands-On Large Language Models: [Link](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models) 
 
 **Computer Science Courses**
-1. Stanford CS224n - NLP with DL:
-[Course Link](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/) |
-[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4) 
-2. Stanford CS224w - ML with Graph (GNN):
-[Course Link](https://snap.stanford.edu/class/cs224w-2020/) |
-[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn)
-3. Stanford CS224u - NLU:
-[Course Link](https://web.stanford.edu/class/cs224u/2021/) |
-[YouTube Link](https://www.youtube.com/watch?v=2w_qYPxuzeA)
-4. Stanford CS231n - DL for CV:
-[Course Link](https://cs231n.stanford.edu/2017/index.html) |
-[YouTube Link](https://www.youtube.com/playlist?list=PLSVEhWrZWDHQTBmWZufjxpw3s8sveJtnJ)
-5. Stanford CS330 - Deep Multi-Task and Meta Learning:
-[Course Link](https://cs330.stanford.edu/fall2022/index.html) |
-[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rNjRoawgt72BBNwL2V7doGI)
-6. Stanford CS336 - Language Modeling from Scratch:
-[Course Link](https://stanford-cs336.github.io/spring2025/) |
-[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
-7. MIT 18.06 - Linear Algebra:
+1. MIT 18.06 - Linear Algebra:
 [Course Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)
-8. MIT 6.S191 - Intro to DL:
+2. MIT 6.S191 - Intro to DL:
 [Course Link](https://introtodeeplearning.com/)
-9. MIT 6.5940 - TinyML and Efficient Deep Learning Computing:
+3. MIT 6.5940 - TinyML and Efficient Deep Learning Computing:
 [Course Link](https://hanlab.mit.edu/courses/2024-fall-65940)
+4. MIT Missing Semester: [Course Link](https://missing.csail.mit.edu/)
+5. Stanford CS224n - NLP with DL:
+[Course Link](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4) 
+6. Stanford CS224w - ML with Graph (GNN):
+[Course Link](https://snap.stanford.edu/class/cs224w-2020/) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn)
+7. Stanford CS224u - NLU:
+[Course Link](https://web.stanford.edu/class/cs224u/2021/) |
+[YouTube Link](https://www.youtube.com/watch?v=2w_qYPxuzeA)
+8. Stanford CS231n - DL for CV:
+[Course Link](https://cs231n.stanford.edu/2017/index.html) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLSVEhWrZWDHQTBmWZufjxpw3s8sveJtnJ)
+9. Stanford CS330 - Deep Multi-Task and Meta Learning:
+[Course Link](https://cs330.stanford.edu/fall2022/index.html) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rNjRoawgt72BBNwL2V7doGI)
+10. Stanford CS336 - Language Modeling from Scratch:
+[Course Link](https://stanford-cs336.github.io/spring2025/) |
+[YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
+
 
 **Cognitive Science Courses**
 1. Computational Neuroscience: [Link](https://www.coursera.org/learn/computational-neuroscience)
