@@ -34,7 +34,6 @@
 [Course Link](https://stanford-cs336.github.io/spring2025/) |
 [YouTube Link](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
 
-
 **Cognitive Science Courses**
 1. Computational Neuroscience: [Link](https://www.coursera.org/learn/computational-neuroscience)
 2. Human Behavioral Biology: [Link](https://www.youtube.com/playlist?list=PL848F2368C90DDC3D)
@@ -43,6 +42,17 @@
 5. MIT 6.868J - The Society of Mind: [Link](https://ocw.mit.edu/courses/6-868j-the-society-of-mind-fall-2011/)
     - MIT AI Course Lecture 19 - Architectures: GPS, SOAR, Subsumption, Society of Mind: [Link](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-19-architectures-gps-soar-subsumption-society-of-mind/)
     - MIT AGI Course Talk - Cognitive Architecture (Nate Derbinsky): [Link](https://www.youtube.com/watch?v=bfO4EkoGh40)
+
+**Open-Source Projects**
+1. Learn Claude Code:
+[GitHub Repo](https://github.com/shareAI-lab/learn-claude-code) |
+[Website](https://learn.shareai.run/en/)
+2. Claude Skills:
+[GitHub Repo](https://github.com/anthropics/skills) |
+[Demo](https://agentskills.io/home)
+4. EmojiCloud:
+[GitHub Repo](https://github.com/BowangLan/emoji-cloud-engine) |
+[PyPI](https://pypi.org/project/EmojiCloud/)
 
 **Other Resources**
 1. Elements of AI: [Link](https://www.elementsofai.com/) (finished)
