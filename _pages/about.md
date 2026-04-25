@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a computer science PhD student at CWRU. My research interests lie in causal inference, model interpretability, and concept learning. 
+Hello! I am a computer science PhD student at CWRU. My research focuses on large multimodal models, aiming to improve inference efficiency.
 
 I obtained my master’s degree in Computer Science at UCSD, where I research improving the explainability and reliability of LLMs. I initiated a project to develop a text benchmark dataset for LLM interpretability and causal inference with the help of <a href = "https://www.amirfeder.com/">Dr. Amir Feder</a> at Columbia University.
 
