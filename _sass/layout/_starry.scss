@@ -1,0 +1,159 @@
+/* ==========================================================================
+   STARRY PAINTERLY LAYOUT
+   ========================================================================== */
+
+body {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(242, 183, 5, 0.42) 0 4rem, transparent 4.3rem),
+    radial-gradient(circle at 86% 8%, rgba(255, 244, 201, 0.5) 0 3rem, transparent 3.4rem),
+    repeating-radial-gradient(ellipse at 78% 22%, rgba(31, 59, 143, 0.2) 0 2px, transparent 3px 16px),
+    linear-gradient(125deg, rgba(20, 33, 61, 0.08), transparent 30%),
+    var(--global-bg-color);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    repeating-linear-gradient(105deg, rgba(20, 33, 61, 0.05) 0 2px, transparent 2px 18px),
+    repeating-linear-gradient(14deg, rgba(176, 90, 25, 0.08) 0 1px, transparent 1px 22px);
+  mix-blend-mode: multiply;
+}
+
+.masthead {
+  background:
+    linear-gradient(90deg, rgba(255, 244, 201, 0.95), rgba(247, 223, 158, 0.9)),
+    var(--global-bg-color);
+  box-shadow: 0 8px 24px rgba(20, 33, 61, 0.12);
+}
+
+.masthead::after {
+  height: 3px;
+  background: linear-gradient(90deg, var(--painting-sky), var(--painting-sun), var(--painting-rust));
+}
+
+.masthead__menu-item {
+  background: transparent;
+}
+
+.masthead__menu-item a {
+  color: var(--global-masthead-link-color);
+  font-weight: 700;
+}
+
+.masthead__menu-item a:hover {
+  color: var(--global-masthead-link-color-hover);
+}
+
+#main {
+  max-width: 1180px;
+}
+
+.page {
+  @include breakpoint($large) {
+    @include span(9 of 12 last);
+    @include prefix(0.5 of 12);
+    @include suffix(1 of 12);
+  }
+}
+
+.page__inner-wrap {
+  position: relative;
+  padding: 2rem;
+  background:
+    linear-gradient(135deg, rgba(255, 249, 223, 0.9), rgba(255, 244, 201, 0.76)),
+    var(--painting-canvas);
+  border: 2px solid rgba(215, 155, 41, 0.75);
+  border-radius: 4px;
+  box-shadow: 0 22px 48px rgba(20, 33, 61, 0.18);
+}
+
+.page__inner-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0.55rem;
+  pointer-events: none;
+  border: 1px solid rgba(20, 61, 53, 0.24);
+}
+
+.page__title {
+  color: var(--painting-sky-dark);
+  font-family: Georgia, Times, serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0;
+}
+
+.page__content h2 {
+  color: var(--painting-sky);
+  border-bottom: 0;
+}
+
+.page__content h2::after {
+  content: "";
+  display: block;
+  width: min(14rem, 80%);
+  height: 0.45rem;
+  margin-top: 0.4rem;
+  background: linear-gradient(90deg, var(--painting-sun), var(--painting-rust), transparent);
+}
+
+.page__content a {
+  color: var(--global-link-color);
+  text-decoration-color: rgba(242, 183, 5, 0.8);
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.18em;
+}
+
+.page__content a:hover {
+  color: var(--global-link-color-hover);
+}
+
+.sidebar {
+  padding-left: 0.5rem;
+}
+
+.author__avatar img {
+  border-radius: 42% 58% 48% 52%;
+  border: 4px solid var(--painting-sun);
+  box-shadow:
+    0 0 0 7px rgba(31, 59, 143, 0.18),
+    0 18px 36px rgba(20, 33, 61, 0.22);
+}
+
+.author__content,
+.author__urls-wrapper {
+  color: var(--painting-sky-dark);
+}
+
+.author__name {
+  color: var(--painting-sky-dark);
+  font-family: Georgia, Times, serif;
+}
+
+.author__bio {
+  color: var(--global-text-color-light);
+}
+
+.author__urls a,
+.author__urls button {
+  color: var(--painting-sky-dark);
+}
+
+.archive__item,
+.list__item {
+  padding: 0.85rem 0;
+  border-top: 1px solid rgba(215, 155, 41, 0.45);
+}
+
+.archive__item-title a {
+  color: var(--painting-sky);
+}
+
+.page__footer {
+  background:
+    radial-gradient(circle at 20% 0, rgba(242, 183, 5, 0.22), transparent 32%),
+    linear-gradient(135deg, var(--painting-sky-dark), #050816);
+}

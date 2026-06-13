@@ -1,0 +1,30 @@
+/* ==========================================================================
+   STARRY THEME - DARK VERSION
+   ========================================================================== */
+
+html[data-theme="dark"] {
+  --global-base-color                 : #f2b705;
+  --global-bg-color                   : #111827;
+  --global-footer-bg-color            : #050816;
+  --global-border-color               : #d79b29;
+  --global-dark-border-color          : #f2b705;
+  --global-code-background-color      : #172554;
+  --global-code-text-color            : #fff4c9;
+  --global-fig-caption-color          : #f7df9e;
+  --global-link-color                 : #f2b705;
+  --global-link-color-hover           : #f7df9e;
+  --global-link-color-visited         : #d79b29;
+  --global-masthead-link-color        : #fff4c9;
+  --global-masthead-link-color-hover  : #f2b705;
+  --global-text-color                 : #fff4c9;
+  --global-text-color-light           : #f7df9e;
+  --global-thead-color                : #172554;
+  --global-toc-bg-color               : #14213d;
+  --painting-sky                      : #172554;
+  --painting-sky-dark                 : #050816;
+  --painting-sun                      : #f2b705;
+  --painting-wheat                    : #38260c;
+  --painting-cypress                  : #143d35;
+  --painting-rust                     : #d79b29;
+  --painting-canvas                   : #14213d;
+}
