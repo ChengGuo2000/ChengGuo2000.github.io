@@ -1,13 +1,11 @@
 ### [Cheng Guo's personal webpage](https://chengguo2000.github.io/), forked from academicpages.
 
-### Thanks for the contributors to this amazing project!
+### Thanks to the contributors to this amazing project!
 
 ----------------
 
 # Academic Pages
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
-
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
 
 # Getting Started
 
