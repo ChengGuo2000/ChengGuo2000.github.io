@@ -4,7 +4,6 @@
 
 body {
   background:
-    radial-gradient(circle at 16% 22%, rgba(242, 201, 76, 0.74) 0 2.2rem, rgba(242, 201, 76, 0.26) 2.3rem 4rem, transparent 4.2rem),
     radial-gradient(ellipse at 74% 18%, rgba(68, 118, 194, 0.55) 0 13rem, transparent 24rem),
     radial-gradient(ellipse at 90% 64%, rgba(31, 79, 163, 0.55) 0 14rem, transparent 24rem),
     linear-gradient(135deg, rgba(7, 22, 63, 0.92), rgba(22, 59, 122, 0.9) 44%, rgba(15, 46, 98, 0.94)),
@@ -27,6 +26,19 @@ body::before {
 .masthead {
   background: var(--painting-sky-dark);
   box-shadow: 0 8px 24px rgba(5, 8, 22, 0.28);
+}
+
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links,
+.greedy-nav button,
+.masthead__menu-item {
+  background: var(--painting-sky-dark);
+}
+
+.greedy-nav a,
+.greedy-nav button {
+  color: var(--global-masthead-link-color);
 }
 
 .masthead::after {
@@ -185,14 +197,57 @@ body::before {
   color: var(--painting-sun);
 }
 
+.archive {
+  position: relative;
+  padding: 2rem;
+  background: var(--painting-panel);
+  border: 1px solid rgba(242, 201, 76, 0.82);
+  border-radius: 4px;
+  box-shadow: 0 22px 48px rgba(5, 8, 22, 0.34);
+  color: var(--global-text-color);
+}
+
+.archive::before {
+  content: "";
+  position: absolute;
+  inset: 0.55rem;
+  pointer-events: none;
+  border: 1px solid rgba(20, 61, 53, 0.24);
+}
+
+.archive .page__title,
+.archive h1 {
+  color: var(--painting-sky-dark);
+  font-family: Georgia, Times, serif;
+  letter-spacing: 0;
+}
+
+.archive__subtitle {
+  color: var(--painting-sky);
+  border-bottom-color: rgba(242, 201, 76, 0.82);
+}
+
 .archive__item,
 .list__item {
   padding: 0.85rem 0;
   border-top: 1px solid rgba(215, 155, 41, 0.45);
+  color: var(--global-text-color);
+}
+
+.archive a {
+  color: var(--global-link-color);
+  text-decoration-color: rgba(242, 183, 5, 0.8);
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.18em;
 }
 
 .archive__item-title a {
   color: var(--global-link-color);
+}
+
+.archive a:hover,
+.archive__item-title a:hover {
+  color: var(--global-link-color-hover);
 }
 
 .page__footer {
