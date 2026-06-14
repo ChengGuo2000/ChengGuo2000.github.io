@@ -101,6 +101,10 @@ body::before {
   letter-spacing: 0;
 }
 
+html[data-theme="dark"] .page__title {
+  color: var(--global-text-color);
+}
+
 .page__content h2 {
   color: var(--painting-sky);
   border-bottom: 0;
@@ -181,6 +185,12 @@ body::before {
 .author__name {
   color: var(--painting-canvas);
   font-family: Georgia, Times, serif;
+}
+
+html[data-theme="dark"] .author__name,
+html[data-theme="dark"] .author__urls .author__desktop,
+html[data-theme="dark"] .author__urls .author__desktop .fas {
+  color: var(--global-text-color);
 }
 
 .author__bio {
