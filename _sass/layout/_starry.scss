@@ -2,12 +2,17 @@
    STARRY PAINTERLY LAYOUT
    ========================================================================== */
 
+html {
+  background-color: var(--painting-sky-mid);
+}
+
 body {
   background:
     radial-gradient(ellipse at 74% 18%, rgba(68, 118, 194, 0.55) 0 13rem, transparent 24rem),
     radial-gradient(ellipse at 90% 64%, rgba(31, 79, 163, 0.55) 0 14rem, transparent 24rem),
-    linear-gradient(135deg, rgba(7, 22, 63, 0.92), rgba(22, 59, 122, 0.9) 44%, rgba(15, 46, 98, 0.94)),
-    var(--global-bg-color);
+    linear-gradient(135deg, rgba(7, 22, 63, 0.92), rgba(22, 59, 122, 0.9) 44%, rgba(15, 46, 98, 0.94));
+  background-color: var(--painting-sky-mid);
+  min-height: 100vh;
 }
 
 body::before {
@@ -111,8 +116,9 @@ html[data-theme="dark"] .page__title {
 
 html[data-theme="dark"] .page__content h2,
 html[data-theme="dark"] .archive h2,
+html[data-theme="dark"] .archive .page__content h2,
 html[data-theme="dark"] .archive__subtitle {
-  color: var(--global-text-color);
+  color: var(--global-text-color) !important;
 }
 
 .page__content h2::after {
