@@ -242,6 +242,11 @@ html[data-theme="dark"] .author__urls .author__desktop .fas {
   letter-spacing: 0;
 }
 
+html[data-theme="dark"] .archive h1,
+html[data-theme="dark"] .archive h1 strong {
+  color: var(--global-text-color) !important;
+}
+
 .archive__subtitle {
   color: var(--painting-sky);
   border-bottom-color: rgba(242, 201, 76, 0.82);
