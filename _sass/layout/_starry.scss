@@ -69,6 +69,17 @@ body::before {
   border-bottom-color: var(--painting-sun);
 }
 
+html[data-theme="dark"] .masthead,
+html[data-theme="dark"] .masthead__inner-wrap,
+html[data-theme="dark"] .masthead__menu,
+html[data-theme="dark"] .greedy-nav,
+html[data-theme="dark"] .greedy-nav .visible-links,
+html[data-theme="dark"] .greedy-nav .hidden-links,
+html[data-theme="dark"] .greedy-nav button,
+html[data-theme="dark"] .masthead__menu-item {
+  background: var(--painting-sky-dark) !important;
+}
+
 #main {
   max-width: 1180px;
 }
