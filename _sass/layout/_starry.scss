@@ -225,6 +225,12 @@ html[data-theme="dark"] .author__urls .author__desktop .fas {
   border-radius: 4px;
   box-shadow: 0 22px 48px rgba(5, 8, 22, 0.34);
   color: var(--global-text-color);
+
+  @include breakpoint($large) {
+    @include span(9 of 12 last);
+    @include prefix(0.5 of 12);
+    @include suffix(1 of 12);
+  }
 }
 
 .archive::before {
