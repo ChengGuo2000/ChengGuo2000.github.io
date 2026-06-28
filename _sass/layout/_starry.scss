@@ -171,6 +171,11 @@ html[data-theme="dark"] .archive__subtitle {
   border: 0;
 }
 
+.sidebar .author__urls-wrapper {
+  background: rgba(7, 22, 63, 0.64);
+  border: 1px solid rgba(242, 201, 76, 0.24);
+}
+
 .sidebar .author__content {
   border-bottom: 0;
 }
