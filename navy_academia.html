@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Navy Academia — Academic Paper Slide Template</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #FFFFFF;
+      --ink: #000080;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    .deck {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 280ms ease;
+      z-index: 2;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .pagenum {
+      position: absolute;
+      right: clamp(28px, 2.4vw, 48px);
+      bottom: clamp(48px, 4.8vh, 76px);
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(11px, 0.82vw, 13px);
+      color: var(--ink);
+      letter-spacing: 0.06em;
+      z-index: 9;
+    }
+
+    .hairlines::before,
+    .hairlines::after {
+      content: '';
+      position: absolute;
+      left: clamp(36px, 3.6vw, 80px);
+      right: clamp(36px, 3.6vw, 80px);
+      height: 1.5px;
+      background: var(--ink);
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .hairlines::before {
+      top: clamp(28px, 2.6vh, 48px);
+    }
+
+    .hairlines::after {
+      bottom: clamp(20px, 2vh, 32px);
+    }
+
+    .s-cover {
+      background: var(--paper);
+    }
+
+    .s-cover .titlewrap {
+      position: absolute;
+      left: clamp(36px, 3.6vw, 80px);
+      top: clamp(80px, 9vh, 160px);
+      z-index: 5;
+      max-width: 60%;
+    }
+
+    .s-cover .title {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(100px, min(11vw, 18vh), 200px);
+      line-height: 0.92;
+      letter-spacing: -0.008em;
+      color: var(--ink);
+    }
+
+    .s-cover .subkicker {
+      margin-top: clamp(20px, 2.2vh, 36px);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .s-cover .subkicker .l {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(13px, 1vw, 16px);
+      color: var(--ink);
+    }
+
+    .s-cover .subkicker .ed {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-size: clamp(28px, min(2.8vw, 4.6vh), 50px);
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .s-cover .cfooter {
+
+      position: absolute;
+      left: clamp(36px, 3.6vw, 80px);
+      right: clamp(680px, 40vw, 880px);
+      bottom: clamp(82px, 8vh, 120px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: end;
+      z-index: 5;
+      gap: clamp(28px, 3vw, 56px);
+    }
+
+    .s-cover .cfooter .colf {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(14px, 0.92vw, 15px);
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .s-cover .cfooter .colf .ftag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(11px, 0.78vw, 13px);
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .s-manifesto {
+      background: var(--paper);
+    }
+
+    .s-manifesto .stmt-wrap {
+      position: absolute;
+      left: clamp(60px, 8vw, 160px);
+      right: clamp(60px, 8vw, 160px);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      text-align: left;
+    }
+
+    .s-manifesto .stmt {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(56px, min(6.4vw, 11vh), 120px);
+      line-height: 1.05;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+    }
+
+    .s-manifesto .stmt .roman {
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .s-manifesto .attr {
+      margin-top: clamp(28px, 3vh, 50px);
+      display: flex;
+      gap: clamp(14px, 1.4vw, 24px);
+      align-items: center;
+      border-top: 1px solid var(--ink);
+      padding-top: clamp(10px, 1.2vh, 18px);
+    }
+
+    .s-manifesto .attr .who {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: clamp(12px, 0.85vw, 14px);
+      color: var(--ink);
+    }
+
+    .s-manifesto .attr .meta-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(12px, 0.82vw, 14px);
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      opacity: 0.78;
+    }
+
+    .s-index {
+      background: var(--paper);
+    }
+
+    .s-index .frame {
+      position: absolute;
+      inset: clamp(76px, 8vh, 130px) clamp(36px, 3.6vw, 80px) clamp(100px, 10vh, 150px);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      gap: clamp(20px, 2.2vh, 36px);
+      z-index: 5;
+    }
+
+    .s-index .topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: clamp(12px, 1.4vh, 22px);
+      gap: 30px;
+    }
+
+    .s-index .topbar .h {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-size: clamp(48px, min(5vw, 8.5vh), 100px);
+      line-height: 0.95;
+      color: var(--ink);
+    }
+
+    .s-index .topbar .lab-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(12px, 0.9vw, 14px);
+      color: var(--ink);
+      text-align: right;
+    }
+
+    .s-index .list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: clamp(14px, 2vh, 28px) clamp(28px, 3vw, 56px);
+    }
+
+    .s-index .row {
+      align-self: stretch;
+    }
+
+    .s-index .row {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: clamp(12px, 1.4vw, 22px);
+      border-bottom: 1px solid #000080;
+      padding-bottom: clamp(12px, 1.4vh, 20px);
+    }
+
+    .s-index .row .num-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(13px, 0.9vw, 15px);
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      padding-top: 6px;
+    }
+
+    .s-index .row h3 {
+      margin: 0 0 6px 0;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(26px, 2vw, 40px);
+      line-height: 1.05;
+      color: var(--ink);
+    }
+
+    .s-index .row p {
+      margin: 0;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(14px, 0.95vw, 15px);
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 92%;
+    }
+
+    .s-chapter {
+      background: var(--paper);
+    }
+
+    .s-chapter .frame {
+      position: absolute;
+      left: clamp(36px, 3.6vw, 80px);
+      right: clamp(280px, 30vw, 540px);
+      top: clamp(80px, 9vh, 140px);
+      bottom: clamp(110px, 11vh, 170px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 5;
+      gap: clamp(18px, 2vh, 32px);
+    }
+
+    .s-chapter .nm-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(13px, 0.92vw, 15px);
+      color: var(--ink);
+      letter-spacing: 0.06em;
+    }
+
+    .s-chapter .ttl {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(56px, min(6vw, 10vh), 130px);
+      line-height: 1.0;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+
+    .s-chapter .lede {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+      font-size: clamp(15px, 1vw, 18px);
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 56ch;
+    }
+
+    .s-data {
+      background: var(--paper);
+    }
+
+    .s-data .frame {
+      position: absolute;
+      inset: clamp(76px, 8vh, 130px) clamp(36px, 3.6vw, 80px) clamp(100px, 10vh, 150px);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: clamp(20px, 2vh, 36px);
+      z-index: 5;
+    }
+
+    .s-data .topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: clamp(12px, 1.4vh, 22px);
+      gap: 30px;
+    }
+
+    .s-data .topbar .h {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-size: clamp(46px, min(4.8vw, 8.2vh), 92px);
+      line-height: 0.95;
+      color: var(--ink);
+    }
+
+    .s-data .topbar .lab-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(12px, 0.9vw, 14px);
+      color: var(--ink);
+      text-align: right;
+    }
+
+    .s-data .body {
+      display: grid;
+      grid-template-columns: 0.8fr 1.6fr;
+      gap: clamp(28px, 3vw, 56px);
+    }
+
+    .s-data .col-a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(20px, 2.4vh, 36px);
+    }
+
+    .s-data .stat .vbig {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(110px, min(11vw, 18vh), 240px);
+      line-height: 0.92;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+    }
+
+    .s-data .stat .lab2 {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: clamp(13px, 0.95vw, 15px);
+      color: var(--ink);
+      margin-top: 6px;
+    }
+
+    .s-data .stat .desc {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(15px, 1vw, 17px);
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 30ch;
+      margin-top: 6px;
+    }
+
+    .s-data .chart {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: clamp(10px, 1.2vh, 18px);
+    }
+
+    .s-data .chart .bars {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: clamp(10px, 1vw, 18px);
+      align-items: end;
+      height: 100%;
+      min-height: clamp(280px, 38vh, 540px);
+    }
+
+    .s-data .chart .stack {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 3px;
+      height: 100%;
+    }
+
+    .s-data .chart .stack .cell {
+      flex: 1 1 0;
+      min-height: 6px;
+      background: #000080;
+    }
+
+    .s-data .chart .stack .cell.on {
+      background: var(--ink);
+    }
+
+    .s-data .chart .ticks {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: clamp(10px, 1vw, 18px);
+      border-top: 1.5px solid var(--ink);
+      padding-top: clamp(8px, 1vh, 14px);
+    }
+
+    .s-data .chart .ticks .ticklab {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(12px, 0.85vw, 14px);
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    .s-quote {
+      background: var(--paper);
+    }
+
+    .s-quote .qframe {
+      position: absolute;
+      left: clamp(36px, 3.6vw, 80px);
+      right: clamp(220px, 22vw, 380px);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+
+    .s-quote .qkicker {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: clamp(12px, 0.9vw, 14px);
+      color: var(--ink);
+      margin-bottom: clamp(16px, 1.8vh, 28px);
+    }
+
+    .s-quote .qbody {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(50px, min(5.6vw, 9vh), 110px);
+      line-height: 1.05;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+      max-width: 92%;
+    }
+
+    .s-quote .qattr {
+      margin-top: clamp(24px, 2.6vh, 40px);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: clamp(14px, 1.4vw, 24px);
+      align-items: end;
+      border-top: 1px solid var(--ink);
+      padding-top: clamp(10px, 1.2vh, 18px);
+    }
+
+    .s-quote .qattr .who-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: clamp(13px, 0.92vw, 15px);
+      color: var(--ink);
+    }
+
+    .s-quote .qattr .role-meta {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(12px, 0.85vw, 14px);
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      opacity: 0.78;
+    }
+
+    .s-table {
+      background: var(--paper);
+    }
+
+    .s-table .frame {
+      position: absolute;
+      inset: clamp(76px, 8vh, 130px) clamp(36px, 3.6vw, 80px) clamp(100px, 10vh, 150px);
+      display: flex;
+      flex-direction: column;
+      z-index: 5;
+    }
+
+    .s-table .topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: clamp(12px, 1.4vh, 22px);
+      margin-bottom: clamp(14px, 1.6vh, 24px);
+      gap: 30px;
+    }
+
+    .s-table .topbar .h {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-size: clamp(46px, min(4.8vw, 8.2vh), 92px);
+      line-height: 0.95;
+      color: var(--ink);
+    }
+
+    .s-table .topbar .lab-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(12px, 0.9vw, 14px);
+      color: var(--ink);
+      text-align: right;
+    }
+
+    .s-table .ledger {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      justify-content: stretch;
+    }
+
+    .s-table .row {
+      display: grid;
+      grid-template-columns: 76px 0.6fr 1.4fr 0.7fr 0.5fr;
+      gap: clamp(14px, 1.4vw, 28px);
+      align-items: center;
+      padding: 0;
+      flex: 1 1 0;
+      min-height: clamp(46px, 6vh, 80px);
+      border-bottom: 1px solid #000080;
+    }
+
+    .s-table .row.headrow {
+      border-bottom: 1.5px solid var(--ink);
+      flex: 0 0 auto;
+      min-height: 0;
+      padding: 8px 0;
+    }
+
+    .s-table .row.headrow>div {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(11px, 0.75vw, 12px);
+      color: var(--ink);
+    }
+
+    .s-table .num-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(13px, 0.95vw, 15px);
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+
+    .s-table .nm {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-size: clamp(20px, 1.6vw, 28px);
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .s-table .desc {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(14px, 0.95vw, 15px);
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .s-table .mood-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      font-size: clamp(13px, 0.92vw, 15px);
+      color: var(--ink);
+    }
+
+    .s-table .delta-tag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(13px, 0.92vw, 15px);
+      text-align: right;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+
+    .s-table .delta-tag.up::before {
+      content: '↑ ';
+    }
+
+    .s-table .delta-tag.down::before {
+      content: '↓ ';
+      opacity: 0.6;
+    }
+
+    .s-table .delta-tag.flat::before {
+      content: '— ';
+      opacity: 0.6;
+    }
+
+    .s-colophon {
+      background: var(--paper);
+    }
+
+    .s-colophon .titlewrap {
+      position: absolute;
+      right: clamp(36px, 3.6vw, 80px);
+      top: 28%;
+      z-index: 5;
+      max-width: 56%;
+      text-align: right;
+    }
+
+    .s-colophon .ktag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: clamp(12px, 0.9vw, 14px);
+      color: var(--ink);
+      margin-bottom: clamp(14px, 1.6vh, 24px);
+    }
+
+    .s-colophon .ttl {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      font-weight: 400;
+      font-size: clamp(72px, min(8.4vw, 14vh), 180px);
+      line-height: 0.96;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+
+    .s-colophon .col-footer {
+      position: absolute;
+      left: clamp(36px, 3.6vw, 80px);
+      right: clamp(36px, 3.6vw, 80px);
+      bottom: clamp(106px, 10.4vh, 160px);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1.2fr;
+      gap: clamp(20px, 2.4vw, 44px);
+      z-index: 5;
+    }
+
+    .s-colophon .col-footer>div {
+      border-top: 1.5px solid var(--ink);
+      padding-top: clamp(10px, 1.2vh, 16px);
+    }
+
+    .s-colophon .col-footer .ftag {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(11px, 0.78vw, 13px);
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .s-colophon .col-footer .ftxt {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(14px, 0.95vw, 15px);
+      line-height: 1.5;
+      color: var(--ink);
+    }
+
+    html,
+    body {
+      background: #FFFFFF !important;
+      color: #000080 !important;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    }
+
+    body,
+    .stage,
+    .slide,
+    .s-cover,
+    .s-manifesto,
+    .s-index,
+    .s-chapter,
+    .s-data,
+    .s-quote,
+    .s-table,
+    .s-colophon {
+      background: #FFFFFF !important;
+    }
+
+    *,
+    .pagenum,
+    .s-cover .title,
+    .s-cover .subkicker .l,
+    .s-cover .subkicker .ed,
+    .s-cover .cfooter .colf,
+    .s-cover .cfooter .colf .ftag,
+    .s-manifesto .stmt,
+    .s-manifesto .attr .who,
+    .s-manifesto .attr .meta-tag,
+    .s-index .topbar .h,
+    .s-index .topbar .lab-tag,
+    .s-index .row .num-tag,
+    .s-index .row h3,
+    .s-index .row p,
+    .s-chapter .nm-tag,
+    .s-chapter .ttl,
+    .s-chapter .lede,
+    .s-data .topbar .h,
+    .s-data .topbar .lab-tag,
+    .s-data .stat .vbig,
+    .s-data .stat .lab2,
+    .s-data .stat .desc,
+    .s-data .chart .ticks .ticklab,
+    .s-quote .qkicker,
+    .s-quote .qbody,
+    .s-quote .qattr .who-tag,
+    .s-quote .qattr .role-meta,
+    .s-table .topbar .h,
+    .s-table .topbar .lab-tag,
+    .s-table .row.headrow>div,
+    .s-table .num-tag,
+    .s-table .nm,
+    .s-table .desc,
+    .s-table .mood-tag,
+    .s-table .delta-tag,
+    .s-colophon .ktag,
+    .s-colophon .ttl,
+    .s-colophon .col-footer .ftag,
+    .s-colophon .col-footer .ftxt {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif !important;
+      color: #000080 !important;
+    }
+
+    .s-cover .title,
+    .s-manifesto .stmt,
+    .s-index .topbar .h,
+    .s-chapter .ttl,
+    .s-data .topbar .h,
+    .s-data .stat .vbig,
+    .s-quote .qbody,
+    .s-table .topbar .h,
+    .s-table .nm,
+    .s-colophon .ttl {
+      font-weight: 700 !important;
+      letter-spacing: -0.03em !important;
+    }
+
+    .s-cover .title {
+      font-size: clamp(72px, min(8.6vw, 14vh), 164px) !important;
+      line-height: 0.96 !important;
+      max-width: 10ch;
+    }
+
+    .s-cover .subkicker .ed {
+      font-weight: 500 !important;
+      font-size: clamp(24px, min(2.2vw, 3.8vh), 42px) !important;
+      line-height: 1.2 !important;
+    }
+
+    .s-manifesto .stmt,
+    .s-quote .qbody {
+      font-size: clamp(44px, min(4.8vw, 8vh), 96px) !important;
+      line-height: 1.1 !important;
+    }
+
+    .s-index .topbar .h,
+    .s-data .topbar .h,
+    .s-table .topbar .h {
+      font-size: clamp(40px, min(4vw, 6.8vh), 76px) !important;
+      line-height: 1 !important;
+    }
+
+    .s-chapter .ttl {
+      font-size: clamp(48px, min(5vw, 8.5vh), 104px) !important;
+      line-height: 1.03 !important;
+    }
+
+    .s-index .row p,
+    .s-chapter .lede,
+    .s-data .stat .desc,
+    .s-table .desc,
+    .s-cover .cfooter .colf,
+    .s-colophon .col-footer .ftxt {
+      font-weight: 400 !important;
+      line-height: 1.45 !important;
+    }
+
+    .caption,
+    .s-cover .subkicker .l,
+    .s-cover .cfooter .colf .ftag,
+    .s-manifesto .attr .who,
+    .s-index .topbar .lab-tag,
+    .s-chapter .nm-tag,
+    .s-data .topbar .lab-tag,
+    .s-data .stat .lab2,
+    .s-quote .qkicker,
+    .s-quote .qattr .who-tag,
+    .s-table .topbar .lab-tag,
+    .s-table .row.headrow>div,
+    .s-colophon .ktag,
+    .s-colophon .col-footer .ftag {
+      font-weight: 700 !important;
+      letter-spacing: 0.12em !important;
+    }
+
+    .s-manifesto .attr .meta-tag,
+    .s-quote .qattr .role-meta {
+      opacity: 1 !important;
+    }
+
+    .hairlines::before,
+    .hairlines::after,
+    .s-manifesto .attr,
+    .s-index .topbar,
+    .s-index .row,
+    .s-data .topbar,
+    .s-data .chart .ticks,
+    .s-quote .qattr,
+    .s-table .topbar,
+    .s-table .row,
+    .s-table .row.headrow,
+    .s-colophon .col-footer>div {
+      border-color: #000080 !important;
+      background-color: transparent !important;
+    }
+
+    .hairlines::before,
+    .hairlines::after {
+      height: 2px !important;
+      background: #000080 !important;
+    }
+
+    .s-data .chart .stack .cell {
+      background: #FFFFFF !important;
+      border: 1.5px solid #000080 !important;
+    }
+
+    .s-data .chart .stack .cell.on {
+      background: #000080 !important;
+    }
+
+    .s-cover .titlewrap {
+      max-width: 72% !important;
+    }
+
+    .s-cover .cfooter {
+      right: clamp(36px, 3.6vw, 80px) !important;
+      max-width: 70%;
+    }
+
+    .s-chapter .frame {
+      right: clamp(36px, 3.6vw, 80px) !important;
+      max-width: 82%;
+    }
+
+    .s-quote .qframe {
+      right: clamp(36px, 3.6vw, 80px) !important;
+      max-width: 82%;
+    }
+
+    .s-colophon .titlewrap {
+      left: clamp(36px, 3.6vw, 80px) !important;
+      right: clamp(36px, 3.6vw, 80px) !important;
+      max-width: 78% !important;
+      text-align: left !important;
+    }
+
+    .s-index .row h3,
+    .s-table .nm {
+      font-weight: 600 !important;
+    }
+
+    .pagenum {
+      font-weight: 600 !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    .inv,
+    .sample-card.inv,
+    .metric-card.inv,
+    .takeaway-card.inv,
+    .tag.inv {
+      background: #000080 !important;
+      color: #FFFFFF !important;
+      border-color: #000080 !important;
+    }
+
+    .inv *,
+    .sample-card.inv *,
+    .metric-card.inv *,
+    .takeaway-card.inv * {
+      color: #FFFFFF !important;
+      border-color: #FFFFFF !important;
+    }
+
+    .s-sample-overview,
+    .s-sample-pipeline,
+    .s-sample-results,
+    .s-sample-bench,
+    .s-sample-ablation,
+    .s-sample-qual,
+    .s-sample-takeaways {
+      background: #FFFFFF;
+    }
+
+    .sample-frame {
+      position: absolute;
+      inset: clamp(76px, 8vh, 130px) clamp(36px, 3.6vw, 80px) clamp(100px, 10vh, 150px);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(18px, 2vh, 30px);
+    }
+
+    .sample-topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      border-bottom: 1.5px solid #000080;
+      padding-bottom: clamp(12px, 1.4vh, 22px);
+    }
+
+    .sample-topbar .h {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(38px, min(3.9vw, 6.5vh), 74px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: #000080;
+    }
+
+    .sample-topbar .lab {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: clamp(12px, 0.9vw, 14px);
+      color: #000080;
+      text-align: right;
+    }
+
+    .sample-subtitle {
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(15px, 1vw, 18px);
+      line-height: 1.45;
+      max-width: 74ch;
+      color: #000080;
+    }
+
+    .sample-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(18px, 2vw, 28px);
+    }
+
+    .sample-card {
+      border: 1.5px solid #000080;
+      padding: clamp(18px, 2vh, 26px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 220px;
+    }
+
+    .sample-card .eyebrow,
+    .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      border: 1.5px solid #000080;
+      padding: 6px 10px;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: #000080;
+    }
+
+    .sample-card h3,
+    .sample-card .big {
+      margin: 0;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(28px, 2.2vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #000080;
+    }
+
+    .sample-card p {
+      margin: 0;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(14px, 0.96vw, 16px);
+      line-height: 1.45;
+      color: #000080;
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: 1.05fr 0.42fr 1.05fr 0.42fr 1.05fr;
+      align-items: stretch;
+      gap: clamp(12px, 1.2vw, 18px);
+    }
+
+    .pipe-box {
+      border: 1.5px solid #000080;
+      padding: clamp(18px, 2vh, 26px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+      gap: 16px;
+    }
+
+    .pipe-arrow {
+      display: grid;
+      place-items: center;
+      font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(44px, 4vw, 68px);
+      color: #000080;
+    }
+
+    .pipe-box .kpi {
+      font-size: clamp(40px, 4vw, 64px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.45fr;
+      gap: clamp(20px, 2vw, 28px);
+      flex: 1;
+    }
+
+    .metrics-col {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: clamp(16px, 1.6vw, 24px);
+    }
+
+    .metric-card {
+      border: 1.5px solid #000080;
+      padding: clamp(18px, 2vh, 24px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .metric-card .k {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .metric-card .v {
+      font-size: clamp(40px, 4.2vw, 68px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .metric-card .d {
+      font-size: clamp(14px, 0.96vw, 16px);
+      line-height: 1.4;
+    }
+
+    .chart-panel {
+      border: 1.5px solid #000080;
+      padding: clamp(16px, 1.8vh, 24px);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 14px;
+    }
+
+    .chart-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+    }
+
+    .chart-title .main {
+      font-size: clamp(24px, 1.8vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .chart-title .small {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .chart-legend {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .legend-mark {
+      width: 22px;
+      height: 0;
+      border-top: 3px solid #000080;
+      position: relative;
+    }
+
+    .legend-mark.dash {
+      border-top-style: dashed;
+    }
+
+    .legend-mark.dot::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: -4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #000080;
+    }
+
+    .bench-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: clamp(20px, 2vw, 28px);
+      flex: 1;
+    }
+
+    .bench-table {
+      border: 1.5px solid #000080;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bench-table .row {
+      display: grid;
+      grid-template-columns: 1.25fr repeat(3, 0.75fr);
+      gap: 14px;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1.5px solid #000080;
+      font-size: clamp(14px, 0.95vw, 15px);
+    }
+
+    .bench-table .row.head {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 12px;
+    }
+
+    .bench-table .row:last-child {
+      border-bottom: none;
+    }
+
+    .bench-table .row .best {
+      background: #000080;
+      color: #FFFFFF;
+      padding: 6px 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .mini-bars {
+      border: 1.5px solid #000080;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-bar-row {
+      display: grid;
+      grid-template-columns: 132px 1fr 60px;
+      gap: 12px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .mini-bar-track {
+      height: 22px;
+      border: 1.5px solid #000080;
+      position: relative;
+      background: #FFFFFF;
+    }
+
+    .mini-bar-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      background: #000080;
+    }
+
+    .ablation-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: clamp(20px, 2vw, 28px);
+      flex: 1;
+    }
+
+    .hbars {
+      border: 1.5px solid #000080;
+      padding: 20px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hbar-row {
+      display: grid;
+      grid-template-columns: 160px 1fr 60px;
+      gap: 12px;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .hbar-track {
+      height: 28px;
+      border: 1.5px solid #000080;
+      position: relative;
+      background: #FFFFFF;
+    }
+
+    .hbar-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      background: #000080;
+    }
+
+    .takeaway-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .takeaway-card {
+      border: 1.5px solid #000080;
+      padding: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .takeaway-card .small {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .takeaway-card .big {
+      font-size: clamp(26px, 2vw, 38px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .takeaway-card .body {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .qual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(18px, 2vw, 28px);
+      flex: 1;
+    }
+
+    .qual-panel {
+      border: 1.5px solid #000080;
+      padding: 18px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 12px;
+      min-height: 420px;
+    }
+
+    .mock-figure {
+      border: 1.5px solid #000080;
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mock-figure .diag {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, transparent 48%, #000080 49%, #000080 51%, transparent 52%),
+        linear-gradient(45deg, transparent 48%, #000080 49%, #000080 51%, transparent 52%);
+      opacity: 1;
+    }
+
+    .mock-figure .ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      border: 10px solid #000080;
+    }
+
+    .take-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(20px, 2vw, 28px);
+      flex: 1;
+    }
+
+    .take-left {
+      display: grid;
+      gap: 16px;
+    }
+
+    .take-right {
+      border: 1.5px solid #000080;
+      padding: 22px;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 16px;
+    }
+
+    .big-quote {
+      font-size: clamp(34px, 3vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+
+    .bullet-rows {
+      display: grid;
+      gap: 12px;
+    }
+
+    .bullet-row {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      border-top: 1.5px solid #000080;
+      padding-top: 12px;
+    }
+
+    .bullet-row .num {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .bullet-row .txt {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .sample-frame {
+      inset: clamp(70px, 7.4vh, 118px) clamp(36px, 3.6vw, 80px) clamp(118px, 11.2vh, 172px) !important;
+    }
+
+    .sample-topbar .h {
+      font-size: clamp(36px, min(3.65vw, 6.1vh), 70px) !important;
+    }
+
+    .results-grid.compact-results {
+      grid-template-columns: 0.88fr 1.52fr;
+      gap: clamp(18px, 1.9vw, 26px);
+      min-height: 0;
+    }
+
+    .results-grid.compact-results .metrics-col {
+      gap: clamp(12px, 1.2vw, 18px);
+    }
+
+    .results-grid.compact-results .metric-card {
+      padding: clamp(14px, 1.5vh, 20px);
+      min-height: 0;
+    }
+
+    .results-grid.compact-results .metric-card .v {
+      font-size: clamp(34px, 3.55vw, 60px);
+    }
+
+    .results-grid.compact-results .metric-card .d {
+      font-size: clamp(13px, 0.9vw, 15px);
+    }
+
+    .chart-panel.tight-chart {
+      padding: clamp(14px, 1.5vh, 20px);
+      gap: 10px;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .chart-panel.tight-chart .chart-title .main {
+      font-size: clamp(22px, 1.65vw, 31px);
+    }
+
+    .plot-wrap {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      grid-template-rows: 1fr 28px;
+      column-gap: 10px;
+      row-gap: 8px;
+      min-height: 305px;
+    }
+
+    .chart-legend.tight-legend {
+      padding-left: 56px;
+    }
+
+    .s-cover .title {
+      max-width: 13ch !important;
+    }
+
+    .plot-wrap.clean-axis {
+      display: block !important;
+      min-height: 276px !important;
+      height: 100% !important;
+      overflow: visible !important;
+    }
+
+    .plot-wrap.clean-axis svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-panel.tight-chart {
+      grid-template-rows: auto minmax(0, 1fr) auto !important;
+    }
+
+    .chart-legend.tight-legend {
+      padding-left: 0 !important;
+      justify-content: center;
+    }
+
+    .bench-table .row .best {
+      background: #FFFFFF !important;
+      color: #000080 !important;
+      padding: 0 0 2px 0 !important;
+      text-align: left !important;
+      font-weight: 800 !important;
+      border-bottom: 2px solid #000080 !important;
+      display: inline-block;
+      width: max-content;
+    }
+
+    .bench-table .row.head .ours-head {
+      background: #000080 !important;
+      color: #FFFFFF !important;
+      padding: 6px 10px;
+      text-align: left;
+      letter-spacing: 0.12em;
+    }
+
+    .bench-table .row.avg {
+      background: #000080 !important;
+      color: #FFFFFF !important;
+      font-weight: 700;
+    }
+
+    .bench-table .row.avg>div,
+    .bench-table .row.avg .best {
+      color: #FFFFFF !important;
+      border-color: #FFFFFF !important;
+      background: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="deck">
+    <div class="stage">
+
+      <section class="slide s-cover hairlines active">
+        <div class="titlewrap">
+          <h1 class="title">Paper Deck</h1>
+          <div class="subkicker">
+            <div class="l caption">Academic Navy · Conference Template</div>
+            <div class="ed">A reusable HTML slide system for presenting research papers.</div>
+          </div>
+        </div>
+
+        <div class="cfooter">
+          <div class="colf">
+            <div class="ftag caption">Designed for</div>
+            <div>Graduate seminars · lab meetings · conference talks</div>
+          </div>
+          <div class="colf">
+            <div class="ftag caption">Format</div>
+            <div>HTML slides · navy on white · sans-serif only</div>
+          </div>
+        </div>
+        <div class="pagenum">01 / 08</div>
+      </section>
+
+      <section class="slide s-manifesto hairlines">
+        <div class="stmt-wrap">
+          <p class="stmt">A strong academic talk turns a dense paper into <span class="roman">one clear argument.</span>
+          </p>
+          <div class="attr">
+            <div class="who caption">Presentation principle</div>
+            <div class="meta-tag caption">Template note · use for thesis statements</div>
+          </div>
+        </div>
+        <div class="pagenum">02 / 08</div>
+      </section>
+
+      <section class="slide s-sample-overview hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · overview &amp; contributions.</div>
+            <div class="lab">Sample layout · card grid</div>
+          </div>
+          <div class="sample-subtitle">Use this page style for a paper overview, motivation, or contributions slide.
+            Three cards keep text short and visually balanced, while one inverted block can highlight the key
+            contribution.</div>
+          <div class="sample-grid-3">
+            <div class="sample-card">
+              <div class="eyebrow">Problem</div>
+              <h3>Existing models are accurate but computationally heavy.</h3>
+              <p>Example text only. Replace with a one-sentence motivation and a compact supporting note.</p>
+            </div>
+            <div class="sample-card inv">
+              <div class="eyebrow">Core idea</div>
+              <h3>Adaptive routing with lightweight calibration.</h3>
+              <p>This inverted block demonstrates how to emphasize the central idea without adding another color.</p>
+            </div>
+            <div class="sample-card">
+              <div class="eyebrow">Outcome</div>
+              <h3>Lower compute, preserved quality, easier deployment.</h3>
+              <p>Use the third card for the practical takeaway or the paper's high-level contribution list.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">09 / 16</div>
+      </section>
+
+      <section class="slide s-index hairlines">
+        <div class="frame">
+          <div class="topbar">
+            <div class="h">A paper talk, in six moves.</div>
+            <div class="lab-tag caption">Suggested structure · Presentation Outline</div>
+          </div>
+          <div class="list">
+            <div class="row">
+              <div class="num-tag caption">01.</div>
+              <div>
+                <h3>Motivation</h3>
+                <p>What problem makes this paper necessary? Introduce the bottleneck or research gap.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">02.</div>
+              <div>
+                <h3>Background</h3>
+                <p>Give the audience the minimum concepts needed before the method appears.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">03.</div>
+              <div>
+                <h3>Key idea</h3>
+                <p>State the core mechanism or modeling insight in one sentence.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">04.</div>
+              <div>
+                <h3>Method</h3>
+                <p>Break the approach into components, using diagrams rather than dense prose.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">05.</div>
+              <div>
+                <h3>Results</h3>
+                <p>Show the headline evidence and then the supporting ablations.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">06.</div>
+              <div>
+                <h3>Limitations</h3>
+                <p>Close with assumptions, failure modes, and questions for future work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">03 / 08</div>
+      </section>
+
+      <section class="slide s-chapter hairlines">
+        <div class="frame">
+          <div class="nm-tag caption">Section divider · method</div>
+          <h2 class="ttl">Replace this with the central technical idea of the paper.</h2>
+          <p class="lede">Use chapter divider slides to reset attention before a major section: background, method,
+            experiments, or discussion.</p>
+        </div>
+        <div class="pagenum">04 / 08</div>
+      </section>
+
+      <section class="slide s-sample-pipeline hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · method pipeline.</div>
+            <div class="lab">Sample layout · process diagram</div>
+          </div>
+          <div class="sample-subtitle">Use this format when explaining a model pipeline, training recipe, or system
+            architecture. Large modules and simple arrows keep the flow obvious from the back of a room.</div>
+          <div class="pipeline">
+            <div class="pipe-box">
+              <div class="tag">Input</div>
+              <div>
+                <div class="big">Dataset &amp; prompts</div>
+                <p class="body">8 benchmarks · 120k samples · 3 input modalities</p>
+              </div>
+              <div class="kpi">120k</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-box inv">
+              <div class="tag">Method</div>
+              <div>
+                <div class="big">Calibration + adaptive selection</div>
+                <p class="body">This central block is inverted to emphasize the paper's main technical component.</p>
+              </div>
+              <div class="kpi">2-stage</div>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-box">
+              <div class="tag">Output</div>
+              <div>
+                <div class="big">Efficient prediction</div>
+                <p class="body">Latency ↓ · memory ↓ · quality preserved</p>
+              </div>
+              <div class="kpi">-41%</div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">10 / 16</div>
+      </section>
+
+      <section class="slide s-data hairlines">
+        <div class="frame">
+          <div class="topbar">
+            <div class="h">Example data slide · compact chart.</div>
+            <div class="lab-tag caption">Made-up data · replace with paper results</div>
+          </div>
+          <div class="body">
+            <div class="col-a">
+              <div class="stat">
+                <div class="vbig">82%</div>
+                <div class="lab2 caption">Primary metric</div>
+                <div class="desc">Use a large number for the single result that matters most on this slide.</div>
+              </div>
+              <div class="stat">
+                <div class="vbig" style="font-size: clamp(72px, min(7vw, 11vh), 150px);">11k</div>
+                <div class="lab2 caption">Secondary metric</div>
+                <div class="desc">Use the second metric for compute, data scale, or statistical support.</div>
+              </div>
+            </div>
+            <div class="chart">
+
+              <div class="bars">
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="stack">
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell on"></div>
+                  <div class="cell"></div>
+                </div>
+              </div>
+              <div class="ticks">
+                <div class="ticklab caption">Q1 24</div>
+                <div class="ticklab caption">Q2 24</div>
+                <div class="ticklab caption">Q3 24</div>
+                <div class="ticklab caption">Q4 24</div>
+                <div class="ticklab caption">Q1 25</div>
+                <div class="ticklab caption">Q2 25</div>
+                <div class="ticklab caption">Q4 25</div>
+                <div class="ticklab caption">Q1 26</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">05 / 08</div>
+      </section>
+
+      <section class="slide s-sample-results hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · headline results.</div>
+            <div class="lab">Sample layout · metrics + chart</div>
+          </div>
+          <div class="results-grid compact-results">
+            <div class="metrics-col">
+              <div class="metric-card inv">
+                <div class="k">Best average score</div>
+                <div class="v">91.8</div>
+                <div class="d">Top-line value. Use this for the result the audience should remember.</div>
+              </div>
+              <div class="metric-card">
+                <div class="k">Relative gain</div>
+                <div class="v">+7.4%</div>
+                <div class="d">Improvement over the strongest baseline or previous state of the art.</div>
+              </div>
+              <div class="metric-card">
+                <div class="k">Latency reduction</div>
+                <div class="v">1.9×</div>
+                <div class="d">Runtime, memory, parameter count, or cost result.</div>
+              </div>
+            </div>
+            <div class="chart-panel tight-chart">
+              <div class="chart-title">
+                <div class="main">Performance vs. compute budget</div>
+                <div class="small">Made-up example</div>
+              </div>
+              <div class="plot-wrap clean-axis">
+                <svg aria-hidden="true" preserveaspectratio="xMidYMid meet" viewbox="0 0 680 360">
+                  <g fill="#000080" font-family="Inter, IBM Plex Sans, Arial, sans-serif" font-size="14"
+                    font-weight="700">
+                    <text text-anchor="end" x="56" y="38">100</text>
+                    <text text-anchor="end" x="56" y="104">90</text>
+                    <text text-anchor="end" x="56" y="170">80</text>
+                    <text text-anchor="end" x="56" y="236">70</text>
+                    <text text-anchor="end" x="56" y="302">60</text>
+                  </g>
+                  <g stroke="#000080" stroke-width="1.5">
+                    <line x1="76" x2="626" y1="34" y2="34"></line>
+                    <line x1="76" x2="626" y1="100" y2="100"></line>
+                    <line x1="76" x2="626" y1="166" y2="166"></line>
+                    <line x1="76" x2="626" y1="232" y2="232"></line>
+                    <line x1="76" x2="626" y1="298" y2="298"></line>
+                    <line stroke-width="3" x1="76" x2="76" y1="34" y2="298"></line>
+                    <line stroke-width="3" x1="76" x2="626" y1="298" y2="298"></line>
+                    <line x1="168" x2="168" y1="34" y2="298"></line>
+                    <line x1="260" x2="260" y1="34" y2="298"></line>
+                    <line x1="352" x2="352" y1="34" y2="298"></line>
+                    <line x1="444" x2="444" y1="34" y2="298"></line>
+                    <line x1="536" x2="536" y1="34" y2="298"></line>
+                    <line x1="626" x2="626" y1="34" y2="298"></line>
+                  </g>
+                  <polyline fill="none" points="76,272 168,240 260,198 352,158 444,116 536,84 626,52" stroke="#000080"
+                    stroke-width="5"></polyline>
+                  <polyline fill="none" points="76,286 168,262 260,232 352,208 444,184 536,164 626,146" stroke="#000080"
+                    stroke-dasharray="12 9" stroke-width="5"></polyline>
+                  <g fill="#000080">
+                    <circle cx="76" cy="272" r="6"></circle>
+                    <circle cx="168" cy="240" r="6"></circle>
+                    <circle cx="260" cy="198" r="6"></circle>
+                    <circle cx="352" cy="158" r="6"></circle>
+                    <circle cx="444" cy="116" r="6"></circle>
+                    <circle cx="536" cy="84" r="6"></circle>
+                    <circle cx="626" cy="52" r="6"></circle>
+                    <circle cx="76" cy="286" r="6"></circle>
+                    <circle cx="168" cy="262" r="6"></circle>
+                    <circle cx="260" cy="232" r="6"></circle>
+                    <circle cx="352" cy="208" r="6"></circle>
+                    <circle cx="444" cy="184" r="6"></circle>
+                    <circle cx="536" cy="164" r="6"></circle>
+                    <circle cx="626" cy="146" r="6"></circle>
+                  </g>
+                  <g fill="#000080" font-family="Inter, IBM Plex Sans, Arial, sans-serif" font-size="14"
+                    font-weight="700" text-anchor="middle">
+                    <text x="76" y="334">10%</text><text x="168" y="334">20%</text><text x="260" y="334">30%</text><text
+                      x="352" y="334">40%</text><text x="444" y="334">50%</text><text x="536" y="334">60%</text><text
+                      x="626" y="334">70%</text>
+                  </g>
+                </svg>
+              </div>
+              <div class="chart-legend tight-legend">
+                <div class="legend-item"><span class="legend-mark dot"></span> Proposed method</div>
+                <div class="legend-item"><span class="legend-mark dash"></span> Baseline</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">11 / 16</div>
+      </section>
+
+      <section class="slide s-sample-bench hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · benchmark comparison.</div>
+            <div class="lab">Sample layout · table + mini chart</div>
+          </div>
+          <div class="bench-grid">
+            <div class="bench-table">
+              <div class="row head">
+                <div>Benchmark</div>
+                <div>Baseline</div>
+                <div class="ours-head">Ours</div>
+                <div>Δ</div>
+              </div>
+              <div class="row">
+                <div>Task A</div>
+                <div>84.1</div>
+                <div class="best">89.5</div>
+                <div>+5.4</div>
+              </div>
+              <div class="row">
+                <div>Task B</div>
+                <div>78.3</div>
+                <div class="best">82.0</div>
+                <div>+3.7</div>
+              </div>
+              <div class="row">
+                <div>Task C</div>
+                <div>90.4</div>
+                <div class="best">91.7</div>
+                <div>+1.3</div>
+              </div>
+              <div class="row">
+                <div>Task D</div>
+                <div>71.9</div>
+                <div class="best">79.8</div>
+                <div>+7.9</div>
+              </div>
+              <div class="row">
+                <div>Task E</div>
+                <div>86.5</div>
+                <div class="best">88.2</div>
+                <div>+1.7</div>
+              </div>
+              <div class="avg row">
+                <div>Average</div>
+                <div>82.2</div>
+                <div class="best">86.2</div>
+                <div>+4.0</div>
+              </div>
+            </div>
+            <div class="mini-bars">
+              <div class="tag inv">Visual summary</div>
+              <div class="mini-bar-row">
+                <div>Task A</div>
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill" style="width:89.5%"></div>
+                </div>
+                <div>89.5</div>
+              </div>
+              <div class="mini-bar-row">
+                <div>Task B</div>
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill" style="width:82%"></div>
+                </div>
+                <div>82.0</div>
+              </div>
+              <div class="mini-bar-row">
+                <div>Task C</div>
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill" style="width:91.7%"></div>
+                </div>
+                <div>91.7</div>
+              </div>
+              <div class="mini-bar-row">
+                <div>Task D</div>
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill" style="width:79.8%"></div>
+                </div>
+                <div>79.8</div>
+              </div>
+              <div class="mini-bar-row">
+                <div>Task E</div>
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill" style="width:88.2%"></div>
+                </div>
+                <div>88.2</div>
+              </div>
+              <div class="mini-bar-row">
+                <div>Average</div>
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill" style="width:86.2%"></div>
+                </div>
+                <div>86.2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">12 / 16</div>
+      </section>
+
+      <section class="slide s-sample-ablation hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · ablation study.</div>
+            <div class="lab">Sample layout · bars + takeaways</div>
+          </div>
+          <div class="ablation-layout">
+            <div class="hbars">
+              <div class="hbar-row">
+                <div>Full model</div>
+                <div class="hbar-track">
+                  <div class="hbar-fill" style="width:94%"></div>
+                </div>
+                <div>94.0</div>
+              </div>
+              <div class="hbar-row">
+                <div>– module A</div>
+                <div class="hbar-track">
+                  <div class="hbar-fill" style="width:88%"></div>
+                </div>
+                <div>88.0</div>
+              </div>
+              <div class="hbar-row">
+                <div>– module B</div>
+                <div class="hbar-track">
+                  <div class="hbar-fill" style="width:85%"></div>
+                </div>
+                <div>85.0</div>
+              </div>
+              <div class="hbar-row">
+                <div>– module C</div>
+                <div class="hbar-track">
+                  <div class="hbar-fill" style="width:81%"></div>
+                </div>
+                <div>81.0</div>
+              </div>
+              <div class="hbar-row">
+                <div>Single-stage</div>
+                <div class="hbar-track">
+                  <div class="hbar-fill" style="width:79%"></div>
+                </div>
+                <div>79.0</div>
+              </div>
+            </div>
+            <div class="takeaway-stack">
+              <div class="takeaway-card inv">
+                <div class="small">Key finding</div>
+                <div class="big">Module B matters almost as much as Module A.</div>
+                <div class="body">Inverted cards work well for one-sentence interpretive takeaways.</div>
+              </div>
+              <div class="takeaway-card">
+                <div class="small">Interpretation</div>
+                <div class="big">The full configuration provides the most stable improvement.</div>
+                <div class="body">Use this for a plain-language explanation rather than repeating the plotted numbers.
+                </div>
+              </div>
+              <div class="takeaway-card">
+                <div class="small">Practical note</div>
+                <div class="big">Ablations are easier to read when each row has one message.</div>
+                <div class="body">Avoid mixing too many factors on the same chart unless comparison is the point.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">13 / 16</div>
+      </section>
+
+      <section class="slide s-sample-qual hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · qualitative examples.</div>
+            <div class="lab">Sample layout · three-panel comparison</div>
+          </div>
+          <div class="qual-grid">
+            <div class="qual-panel">
+              <div class="tag">Case 1</div>
+              <div class="mock-figure">
+                <div class="diag"></div>
+                <div class="ring"></div>
+              </div>
+              <div class="body">Use for a representative success case, visual example, or figure crop from a paper.
+              </div>
+            </div>
+            <div class="qual-panel inv">
+              <div class="tag">Case 2</div>
+              <div class="mock-figure" style="border-color:#FFFFFF;">
+                <div class="diag"
+                  style="background:linear-gradient(135deg, transparent 48%, #FFFFFF 49%, #FFFFFF 51%, transparent 52%),linear-gradient(45deg, transparent 48%, #FFFFFF 49%, #FFFFFF 51%, transparent 52%);">
+                </div>
+                <div class="ring" style="border-color:#FFFFFF;"></div>
+              </div>
+              <div class="body">This inverted middle panel shows how to spotlight the most important qualitative example
+                using only navy and white.</div>
+            </div>
+            <div class="qual-panel">
+              <div class="tag">Case 3</div>
+              <div class="mock-figure">
+                <div class="diag"></div>
+                <div class="ring"></div>
+              </div>
+              <div class="body">Use the third panel for a failure case, baseline comparison, or alternate condition.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">14 / 16</div>
+      </section>
+
+      <section class="slide s-quote hairlines">
+        <div class="qframe">
+          <div class="qkicker caption">Discussion prompt</div>
+          <p class="qbody">"What assumption must be true for this method to work outside the benchmark setting?"</p>
+          <div class="qattr">
+            <div class="who-tag caption">Question for audience</div>
+            <div class="role-meta caption">Use quote slides for discussion, critique, or a memorable limitation.</div>
+          </div>
+        </div>
+        <div class="pagenum">06 / 08</div>
+      </section>
+
+      <section class="slide s-table hairlines">
+        <div class="frame">
+          <div class="topbar">
+            <div class="h">Example dense table · readable ledger.</div>
+            <div class="lab-tag caption">Use sparingly · keep rows short</div>
+          </div>
+          <div class="ledger">
+            <div class="row headrow">
+              <div class="caption">No.</div>
+              <div class="caption">Trend</div>
+              <div class="caption">Reading</div>
+              <div class="caption">Mood</div>
+              <div class="caption">YoY</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">01.</div>
+              <div class="nm">Motivation</div>
+              <div class="desc">Tools that opt out of urgency by default.</div>
+              <div class="mood-tag">Quiet · welcomed</div>
+              <div class="delta-tag up caption">14 pts</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">02.</div>
+              <div class="nm">Background</div>
+              <div class="desc">Screens designed to live in living rooms.</div>
+              <div class="mood-tag">Warm · ambient</div>
+              <div class="delta-tag up caption">9 pts</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">03.</div>
+              <div class="nm">Hand-set print</div>
+              <div class="desc">Letterpress and risograph paired with digital briefs.</div>
+              <div class="mood-tag">Tactile · careful</div>
+              <div class="delta-tag up caption">7 pts</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">04.</div>
+              <div class="nm">Method</div>
+              <div class="desc">Display faces with one slightly off detail.</div>
+              <div class="mood-tag">Curious · alert</div>
+              <div class="delta-tag flat caption">flat</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">05.</div>
+              <div class="nm">Receipts &amp; ledgers</div>
+              <div class="desc">Information designed to be filed, not consumed.</div>
+              <div class="mood-tag">Plain · honest</div>
+              <div class="delta-tag up caption">5 pts</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">06.</div>
+              <div class="nm">Limitations</div>
+              <div class="desc">Brand voice that admits the day's actual mood.</div>
+              <div class="mood-tag">Open · tender</div>
+              <div class="delta-tag up caption">11 pts</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">07.</div>
+              <div class="nm">Long-form receipts</div>
+              <div class="desc">Newsletters that read like printed pamphlets.</div>
+              <div class="mood-tag">Slow · sourced</div>
+              <div class="delta-tag up caption">3 pts</div>
+            </div>
+            <div class="row">
+              <div class="num-tag caption">08.</div>
+              <div class="nm">Pre-loved objects</div>
+              <div class="desc">Resale and repair as the front of the brand.</div>
+              <div class="mood-tag">Worn · cared</div>
+              <div class="delta-tag down caption">2 pts</div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">07 / 08</div>
+      </section>
+
+      <section class="slide s-sample-takeaways hairlines">
+        <div class="sample-frame">
+          <div class="sample-topbar">
+            <div class="h">Example slide · takeaways &amp; discussion.</div>
+            <div class="lab">Sample layout · closing summary</div>
+          </div>
+          <div class="take-grid">
+            <div class="take-left">
+              <div class="sample-card inv" style="min-height:auto;">
+                <div class="eyebrow">Main message</div>
+                <div class="big">State the one idea you want the audience to remember 24 hours later.</div>
+              </div>
+              <div class="bullet-rows">
+                <div class="bullet-row">
+                  <div class="num">01</div>
+                  <div class="txt">Use this slide style to summarize three takeaways, limitations, or future-work
+                    directions.</div>
+                </div>
+                <div class="bullet-row">
+                  <div class="num">02</div>
+                  <div class="txt">Keep each point short; let the title and visual hierarchy do the heavy lifting.</div>
+                </div>
+                <div class="bullet-row">
+                  <div class="num">03</div>
+                  <div class="txt">If needed, replace one of these rows with a citation strip or discussion question.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="take-right">
+              <div class="tag inv">Template note</div>
+              <div class="big-quote">This file now includes multiple sample slide patterns so future AI agents can infer
+                how to turn an academic paper into a full, visually consistent deck.</div>
+              <div class="sample-subtitle" style="max-width:100%;">All examples use only two colors—white and navy
+                blue—and all typography remains sans-serif. Replace the made-up numbers and placeholder text with
+                paper-specific content.</div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenum">15 / 16</div>
+      </section>
+
+      <section class="slide s-colophon hairlines">
+        <div class="titlewrap">
+          <div class="ktag caption">Template extension · sample pages</div>
+          <h2 class="ttl">Ready for future academic decks.</h2>
+        </div>
+        <div class="col-footer">
+          <div>
+            <div class="ftag caption">Added</div>
+            <div class="ftxt">Contribution grid<br />method pipeline<br />results dashboard</div>
+          </div>
+          <div>
+            <div class="ftag caption">Also added</div>
+            <div class="ftxt">Benchmark table<br />ablation layout<br />qualitative triptych</div>
+          </div>
+          <div>
+            <div class="ftag caption">Design rules</div>
+            <div class="ftxt">Two colors only<br />Sans-serif only<br />Selective inversion for emphasis</div>
+          </div>
+          <div>
+            <div class="ftag caption">Intended use</div>
+            <div class="ftxt">Upload this template in a new AI conversation and ask for a paper-specific slide deck. The
+              sample pages illustrate several academic presentation patterns.</div>
+          </div>
+        </div>
+        <div class="pagenum">16 / 16</div>
+      </section>
+    </div>
+  </div>
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    slides.forEach((slide, idx) => {
+      const pn = slide.querySelector('.pagenum');
+      if (pn) pn.textContent = `${String(idx + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+    });
+    let current = 0;
+    function show(i) {
+      if (i < 0) i = 0;
+      if (i > slides.length - 1) i = slides.length - 1;
+      slides[current].classList.remove('active');
+      slides[i].classList.add('active');
+      current = i;
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {e.preventDefault(); show(current + 1);}
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {e.preventDefault(); show(current - 1);}
+      else if (e.key === 'Home') {e.preventDefault(); show(0);}
+      else if (e.key === 'End') {e.preventDefault(); show(slides.length - 1);}
+    });
+    let tx = null;
+    document.addEventListener('touchstart', (e) => {tx = e.touches[0].clientX;}, {passive: true});
+    document.addEventListener('touchend', (e) => {
+      if (tx == null) return;
+      const dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
+      tx = null;
+    });
+  </script>
+</body>
+
+</html>
